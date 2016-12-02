@@ -1,0 +1,22 @@
+{
+  "name": "parchemin",
+  "homepage": "https://github.com/batimentb/parchemin",
+  "authors": [
+    "Antoine Bordeau <antoine@batb.fr>"
+  ],
+  "description": "Html & Css Library",
+  "main": "styles.css",
+  "keywords": [
+    "css",
+    "html",
+    "components"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
