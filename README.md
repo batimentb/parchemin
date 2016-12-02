@@ -1,2 +1,2 @@
 # parchemin
-css &amp; Html Library
+Html &amp; Css Library of good looking components
