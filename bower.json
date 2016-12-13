@@ -1,6 +1,7 @@
 {
   "name": "parchemin",
   "homepage": "https://github.com/batimentb/parchemin",
+  "version": "0.2.2",
   "authors": [
     "David Duphil",
     "Henry-Benoit Pomarede",
