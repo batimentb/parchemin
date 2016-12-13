@@ -21,12 +21,13 @@ var gulp = require('gulp'),
 
 // Paths
 var bower = './bower_components',
-    inputSass = './app/assets/sass/**/*.scss',
-    output = './compiled_static',
-    jsPath = './app/assets/js'; //Dossier avec nos fichiers JS,
-    imagesPath = "./app/assets/images/*/*",
-    fontsPath = './app/assets/fonts/**/*',
-    fontPath = './app/assets/font/**/*'
+    inputSass = './src/sass/**/*.scss',
+    output = './dist',
+    jsPath = './src/js'; //Dossier avec nos fichiers JS,
+    imagesPath = "./src/images/*/*",
+    fontsPath = './src/fonts/**/*',
+    fontPath = './src/font/**/*'
+
 //Option Sass
 var sassOptions = {
     errLogToConsole: true,
