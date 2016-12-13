@@ -2,6 +2,8 @@
   "name": "parchemin",
   "homepage": "https://github.com/batimentb/parchemin",
   "authors": [
+    "David Duphil",
+    "Henry-Benoit Pomarede",
     "Antoine Bordeau <antoine@batb.fr>"
   ],
   "description": "Html & Css Library",
