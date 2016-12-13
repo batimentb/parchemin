@@ -1,0 +1,169 @@
+@charset "utf-8";
+.modal {
+	bottom: 0;
+	left: 0;
+	position: absolute;
+	right: 0;
+	top: 0;
+	align-items: center;
+	display: none;
+	justify-content: center;
+	overflow: hidden;
+	position: fixed;
+	z-index: 1986;
+}
+
+.modal.is-active {
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+}
+
+.modal-background {
+	bottom: 0;
+	left: 0;
+	position: absolute;
+	right: 0;
+	top: 0;
+	background-color: rgba($color6, 0.86);
+	//@include gradient-classic--Two();
+}
+
+.modal-content{
+	margin: 0 20px;
+	max-height: calc(100vh - 160px);
+	overflow: auto;
+	position: relative;
+	width: 100%;
+	background-color:$base-background;
+	border:1px solid #e6e6e6;
+	box-shadow: 0px 33px 60px 0px rgba(0, 0, 0, 0.19); /* offset-x | offset-y | blur-radius | spread-radius | color */
+}
+
+@media screen and (min-width: 769px) {
+	.modal-content{
+		margin: 0 auto;
+		max-height: calc(100vh - 40px);
+		width: 640px;
+	}
+}
+
+.modal-close {
+	-webkit-touch-callout: none;
+	user-select: none;
+	-moz-appearance: none;
+	-webkit-appearance: none;
+	background-color: rgba(10, 10, 10, 0.1);
+	border: none;
+	border-radius: 290486px;
+	cursor: pointer;
+	display: inline-block;
+	height: 24px;
+	outline: none;
+	position: relative;
+	vertical-align: top;
+	width: 24px;
+	background: none;
+	height: 40px;
+	position: fixed;
+	right: 20px;
+	top: 20px;
+	width: 40px;
+}
+
+.modal-close:before, .modal-close:after {
+	background-color: white;
+	content: "";
+	display: block;
+	height: 2px;
+	left: 50%;
+	margin-left: -25%;
+	margin-top: -1px;
+	position: absolute;
+	top: 50%;
+	width: 50%;
+}
+
+.modal-close:before {
+	transform: rotate(45deg);
+}
+
+.modal-close:after {
+	transform: rotate(-45deg);
+}
+
+.modal-close:hover {
+	background-color: rgba(10, 10, 10, 0.2);
+}
+
+.modal-close.is-small {
+	height: 16px;
+	width: 16px;
+}
+
+.modal-close.is-medium {
+	height: 32px;
+	width: 32px;
+}
+
+.modal-close.is-large {
+	height: 40px;
+	width: 40px;
+}
+
+.modal header{
+	position:relative;
+	padding:20px;
+	text-align:center;
+	border-bottom:1px solid #e6e6e6;
+
+	.modal-close-inner{
+		position:absolute;
+		right:5%;
+		@include center(vertical);
+	}
+}
+	.modal-content-title{
+		margin:0;
+		padding:0;
+	}
+.modal main{
+	padding:33px 5%;
+}
+.modal footer{
+	padding:33px 5%;
+	background-color:$color4;
+
+	[class*="grid"] {
+      justify-content: center;
+    }
+
+	.btn-submit{
+		width:auto;
+		max-width:175px;
+		padding-top:15px;
+		padding-bottom:15px;
+		line-height:1.5;
+		background:$color6;
+
+	}
+}
+
+
+/*
+<div id="modal" class="modal is-active">
+	<div class="modal-background"></div>
+	<div class="modal-content">
+		<header>
+			<h2 class="h3-like">Modal title</h2>
+			<button class="modal-close"></button>
+		</header>
+		<main class="group" role="main">
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ullam libero in consectetur vel eius inventore totam similique, harum rerum odit qui commodi, obcaecati eum unde quaerat perferendis ad sequi dolorem temporibus iure. Fuga quod rem impedit vero possimus saepe hic, enim totam doloremque eveniet facere, porro cumque, minus nam! Voluptas sint aut voluptatem voluptates et, aliquid distinctio nostrum totam, possimus ut, eveniet optio dolor pariatur iusto minima corporis! Quaerat sed quidem illum accusantium hic obcant, quia dolorum debitis culpa. Commodi enim, voluptatibus. Numquam quis recusandae, natus ad, voluptatum excepturi amet hic sunt non aperiam fugiat provident cupiditate illo aliquam in.</p>
+		</main>
+		<footer>
+			<button type="submit" class="btn-submit">Lorem ipsum</button>
+		</footer>
+	</div>
+</div>
+*/

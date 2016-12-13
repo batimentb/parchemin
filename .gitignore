@@ -13,9 +13,37 @@ nbproject
 Thumbs.db
 .vscode
 
+# python files
+*.py[cod]
+venv
+*.sqlite3
+
+# config
+/cb/config.py
+
+# npm, bower, sass
+/node_modules
+/bower_components
+
+#Fichiers statique générés
+/compiled_static
+
+### Developpeur ###
+# cache files for sublime text
+*.tmlanguage.cache
+*.tmPreferences.cache
+*.stTheme.cache
+# workspace files are user-specific
+*.sublime-workspace
+# project files should be checked into the repository, unless a significant proportion of contributors will probably not be using SublimeText
+*.sublime-project
+
+#Mac 
+.DS_Store
+
+#Dossiers voués à dispâraitre
+app/assets/js-old
+app/assets/sass-old
+
 # grunt-contrib-sass cache
 .sass-cache
-
-# Folders to ignore
-bower_components
-node_modules

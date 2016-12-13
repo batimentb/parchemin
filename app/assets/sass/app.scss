@@ -1,0 +1,70 @@
+/*!
+* www.batb.com V0.0.1 (29 Novembre 2016) @author: BATB, HB
+*/
+@charset "utf-8";
+
+@import "_customVariables.scss"; //Surcharge les variables de bootstrap && nos variables
+@import "./knacss/knacss.scss";
+
+//-->Importation des style propre au projet__
+@import "__mixin-perso.scss";
+@import "__helpers.scss";
+@import "__layout-et-principal.scss";
+@import "__menu.scss";
+@import "__form.scss";
+@import "__repeat.scss";
+@import "__modal.scss";
+@import "__page.scss";
+//@import "__responsive.scss";
+
+
+//Juste pour tester la taille des typos
+.textRem{font-size:1.4rem;} // diviser par 10
+.textEm{font-size:(14/14)+em;} // diviser par 14
+.textPx{font-size:14px;}
+
+
+/* ----------------------------- */
+/* ==TYPO 						 */
+/* ----------------------------- */ 
+//>LATO (sans serif)
+
+//>Raleway (sans serif)
+@font-face {
+    font-family: 'ralewayblack';
+    src: url('../fonts/raleway-black-webfont.woff2') format('woff2'),
+         url('../fonts/raleway-black-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+@font-face {
+    font-family: 'ralewayextrabold';
+    src: url('../fonts/raleway-extrabold-webfont.woff2') format('woff2'),
+         url('../fonts/raleway-extrabold-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+@font-face {
+    font-family: 'ralewaybold';
+    src: url('../fonts/raleway-bold-webfont.woff2') format('woff2'),
+         url('../fonts/raleway-bold-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'ralewaymedium';
+    src: url('../fonts/raleway-medium-webfont.woff2') format('woff2'),
+         url('../fonts/raleway-medium-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+@font-face {
+    font-family: 'ralewayregular';
+    src: url('../fonts/raleway-regular-webfont.woff2') format('woff2'),
+         url('../fonts/raleway-regular-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}

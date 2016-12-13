@@ -1,0 +1,722 @@
+@charset "utf-8";
+
+
+/* ----------------------------- */
+/* ==BTN 			             */
+/* ----------------------------- */
+.btn{
+	text-decoration:none;
+	display:inline-block;
+}
+.btn--block{
+	display:block;
+}
+
+//Btn standart avec ou sans icone ds le texte
+.btn-standard{
+	//padding:0 37px;
+	padding: 0 calc(3.7em/1.4);//En gerant le padding de la sorte le btn garde toujours de bonne proportion quand on change la taille de la typo
+	line-height:(6.3/1.4);
+	color:$alpha-color;
+	font-family:$font-EB;
+	font-weight:400;
+	border:1px solid $gris2;
+	background-color:$base-background;
+	transition:background-color 0.2s ease-in, border-color 0.25s ease-in, color 0.15s ease-in;
+	i{
+		margin-right:7px; //Par defaut l'icone est placé a gauche
+	}
+	&:hover,
+	&.hover{
+		color:$color3;
+		border-color:$base-background;
+		background-color:$color2;
+	}
+}//.btn-standard
+	.btn-standard--invert{
+		color:$color3;
+		border:1px solid $color2;
+		background-color:$color2;
+		&:hover,
+		&.hover{
+			color:$alpha-color;
+			border-color:$gris2;
+			background-color:$base-background;
+		}
+	}//.btn-standard--invert
+
+	//Quand l'icone est a droite du texte
+	.btn-standard--icoRight{
+		i{
+			margin-left:7px;
+			margin-right:0;
+		}
+	}//.btn-standard--icoRight
+
+
+//Btn de validation (submit form)
+.btn-submit{
+	display:block;
+	width:100%;
+	padding: calc(2.0em/1.4) 0;//En gerant le padding de la sorte le btn garde toujours de bonne proportion quand on change la taille de la typo
+	line-height:(6.2/1.4);
+	color:$color3;
+	font-family:$font-EB;
+	font-weight:400;
+	text-align:center;
+	background-color:$base-background;
+	border:none;
+	//background: repeating-linear-gradient( 90deg, $color6, #f26a55 100%);
+	@include gradient-classic--Two();
+	transition:box-shadow 0.15s ease;
+	box-shadow: 0px 0px 30px 0px rgba(0, 0, 0, 0.0); /* offset-x | offset-y | blur-radius | spread-radius | color */
+	cursor:pointer;
+
+	&:hover,
+	&.hover{
+		box-shadow: 0px 0px 30px 0px rgba(0, 0, 0, 0.30); /* offset-x | offset-y | blur-radius | spread-radius | color */
+	}
+
+	&.is-disabled, &[disabled]{
+		cursor: not-allowed;
+		pointer-events: all !important;//Sans cette directive le cursor:not-allwed n'apparait pas.
+		box-shadow: none; /* offset-x | offset-y | blur-radius | spread-radius | color */
+	}
+}//.btn-submit
+
+//Btn constitué de seulement un picto
+.btn-ico{
+	height:51px;
+	width:51px;
+	line-height:49px;
+	text-align:center;
+	font-size:1.8rem;
+	color:$color5;
+	border:1px solid rgba(0,0,0, 0.25);
+	background-color:$base-background;
+	border-radius:500px;
+	box-shadow: 0px 0px 30px 0px rgba(0, 0, 0, 0.0); /* offset-x | offset-y | blur-radius | spread-radius | color */
+	transition:box-shadow 0.15s ease, border-color 0.10 ease-out;
+
+	&:hover,
+	&.hover{
+		color:$alpha-color;
+		border-color:$base-background;
+		box-shadow: 0px 8px 21px 0px rgba(0, 0, 0, 0.30); /* offset-x | offset-y | blur-radius | spread-radius | color */
+	}
+	&.active{
+		box-shadow: none;
+		border-color:$base-background;
+		color:$alpha-color;
+	}
+}//.btn-ico
+	.btn-ico--small{
+		height:34px;
+		width:34px;
+		line-height:32px;
+		font-size:1.2rem;
+	}
+
+.btn-linkfat{
+	$btnLinkFatWidth:660;//En px (sert pour les calculs)
+	position:relative;
+	display:block;
+	padding:22px percentage(55/$btnLinkFatWidth) 0 percentage(45/$btnLinkFatWidth);
+	background:$base-background;
+	>div{
+		@extend .flex-container;
+		align-items: center;
+		padding-bottom:22px;
+		border-bottom:1px solid $gris1;
+		z-index:2;
+
+		>:first-child{
+			width:auto;
+			flex:1;
+		}
+
+		>:last-child{
+			width:50px;
+			max-width:50px;
+			text-align:center;		
+		}
+
+		.btn-ico{
+			opacity:0.25;
+		}
+	}
+	//Le rollover
+	&:hover,
+	&.hover{
+		.btn-ico{
+			opacity:1;
+			@extend .btn-ico.hover;
+		}
+		.btn-linkfat-title{
+			color:$alpha-color;
+		}
+	}
+	//L'etat current/active
+	&.active{
+		@include gradient-grey;
+		>div{
+			border-color:transparent;
+		}
+		.btn-ico{
+			opacity:1;
+			@extend .btn-ico.active;
+			transform:translateZ(1px) rotate(45deg);
+		}
+		.btn-linkfat-title{
+			color:$alpha-color;
+		}
+	}
+}
+	.btn-linkfat-title{
+		color: rgba($alpha-color, 0.25);
+		font-family:$font-EB;
+
+		span{
+			display:inline-block;
+			margin:0 41px 0 0;
+			font-size:1.7rem;
+			font-family:$font-BL;
+		}
+	}
+
+
+
+/* ----------------------------- */
+/* ==TITRE common				 */
+/* ----------------------------- */
+//---->Style comme un H1__:
+h1,.h1-like{
+	color:$headings-color;
+	line-height:(8.647rem/$h1-size); //Donne un resultat sans unité (cest le comportement attendu)
+}
+h2,.h2-like,
+h3,.h3-like,
+h4,.h4-like,
+h5,.h5-like
+h6,.h6-like{
+	color:$headings-color;
+	line-height:normal; 
+}
+
+.title1{
+	@extend .flex-container;
+	display:flex;
+	align-items:center;
+	margin:0;
+	padding:0;
+	color:$alpha-color;
+	font-family:$font-BL;
+	font-size:1.7rem;
+	text-transform:uppercase;
+
+	>:first-child{
+		padding:0 8px 0 0;
+	}
+
+	>:last-child{
+		position:relative;
+		width:auto;
+		flex:1;
+		&:before{
+			position:absolute;
+			display:block;
+			content:'';
+			width:100%;
+			height:1px;
+			background-color:$gris1;
+			@include center(vertical);
+		}
+	}
+}//.title1
+
+
+/* ----------------------------- */
+/* ==Style de texte	(p)			 */
+/* ----------------------------- */
+.pSmall{
+	font-size:1.3rem;
+	span{color:$alpha-color;}
+}
+
+/* ---------------------------------------------- */
+/* ==BLOCKS 	     					          */
+/* ---------------------------------------------- */
+.block{
+	display:block;
+}
+
+
+//>Permet de cibler tous les elements .bXXX-valeur [ce sont des éléments récurrents dans plusieurs block]
+[class^="b"][class$="-valeur"]{
+	display:inline-block;
+	font-family:$font-R;
+	font-size:1.2rem;
+	font-weight:400;
+	&,a{
+		color:$color5;
+	}
+	a{
+		text-decoration:underline;
+	}
+	b,strong{
+		font-family:$font-B;
+		font-weight:400;
+	}
+	& + [class^="b"][class$="-valeur"]{
+		margin-left:2px;
+		&:before{
+			margin:0 3px 0 0;
+			content:'—';
+			display:inline-block;
+		}
+	}
+}
+
+//->Block de paragraphe de textes standart
+.description{
+	p:first-child{
+		margin-top:0;
+
+		&::first-letter { /* Utilisez :first-letter si le support pour IE8 ou antérieur est nécessaire. */
+			display:block;
+			float:left;
+			margin:8px 20px 10px 0;
+			font-size: 8.5rem;
+			line-height: 2;
+			font-weight:400;
+		}
+	}
+	p{
+		margin-top:20px;
+	}
+}
+	//Le contenu va etre reparti sur deux colonnes de manieres automatique
+	.description--dual{
+		column-count: 2; /* Disposition de la page en deux colonnes */
+		//column-width: 10em; /* Disposition de la page en colonnes de taille dix fois supérieure à la normale */
+		//column-gap:$grid-gutter;
+	}
+
+//>Un bloc "Badge"
+	.badge{
+		display:inline-block;
+		padding:0 5px;
+		font-size:1.0rem;
+		line-height:(2.1/1);
+		font-family:$font-M;
+		font-weight:400;
+		color:$color3;
+		border-radius:900px;
+		text-align:center;
+		
+		@each $number, $color in $badges {
+			&.badge--#{$number} {
+				background-color:$color;
+			}
+		}
+
+		&.badge--ico{
+			width:25px;
+			height:25px;
+			line-height:2.5rem;
+			font-size:1.2rem;
+		}
+	}//.badge
+
+//>Lavatar
+.avatar{
+	position:relative;
+	display:block;
+	width:68px;height:68px;
+	border-radius:900px;
+	img{
+		display:block;
+		border-radius:900px;
+	}
+	&.avatar--small{
+		width:40px;height:40px;
+	}
+
+	.badge{
+		position:absolute;
+		right: -10px;
+		top: 10%;
+	}
+}
+
+//>Bloc liste
+.bList{
+	$bListWidth:660;//En px (sert pour les calculs)
+
+	position:relative;
+	display:block;
+	padding:18px 0 0 0;
+	padding:18px percentage(55/$bListWidth) 0 percentage(45/$bListWidth);
+	background-color:$base-background;
+	>.flex-container{
+		position:relative;
+		padding-bottom:18px;
+		border-bottom:1px solid $gris1;
+		z-index:2;
+
+		>.bList-number{
+			width:58px;
+			max-width:58px;
+		}
+
+		>:nth-child(2),
+		>:first-child:not(.bList-number){
+			width:auto;
+			flex:1;
+		}
+
+		>:last-child{
+			width:40px;
+			max-width:40px;
+			align-self:center;
+			text-align:center;
+		}
+	}
+	&:before{
+		display:block;
+		position:absolute;
+		top:0;right:0;bottom:0;left:0;
+		content:' ';
+		z-index:1;
+		opacity:0;
+		@include gradient-striped--Three;
+		transition: opacity 0.20s ease-in;
+
+	}
+
+	//>Au rollHover du bloc
+	&.hover:not(.active),
+	&:hover:not(.active){
+		>.flex-container{
+			border-color:transparent;
+		}
+		&:before{
+			opacity:1;
+		}
+		&,
+		.bList-number,
+		.bList-title{
+			color:$color3;
+		}
+
+		.badge{
+			color:$cRouge;
+			background-color:$base-background;
+		}
+
+		.btn-ico{
+			color:$cRouge;
+			@extend .btn-ico.hover;
+		}
+	}//End etat = hover
+
+	//Letat actif (selectionné)
+	&.active{
+		>.flex-container{
+			border-color:transparent;
+
+		}
+		&:before{
+			@include gradient-grey;
+			opacity:1;
+		}
+		.btn-ico{
+			@extend .btn-ico.active;
+			transform:translateZ(1px) rotate(180deg);
+		}
+	}// .active
+
+}// .bList
+	.bList-number{
+		font-family:$font-BL;
+		font-size:1.7rem;
+		color:$alpha-color;
+		font-weight:400;
+	}
+	.bList-lineOne{
+		.badge{
+			position:relative;
+			top:-2px;
+		}
+		.badge + .bList-title{
+			margin-left: 7px;
+		}
+	}
+	.bList-lineTwo{}
+	.bList-title{
+		display:inline-block;
+		font-family:$font-M;
+		font-size:1.6rem;
+		font-weight:400;
+		color:$alpha-color;
+		b,strong{
+			font-family:$font-BL;
+			font-weight:400;
+		}
+	}
+
+//>Bloc pour les event
+.bEvent{
+	header{
+		color:$color5;
+		font-size:1.2rem;
+	}
+}
+	.bEvent-content{
+		@extend .flex-container;
+		display:flex;
+		margin:14px 0 0 18px;
+		padding:0 0 10px 23px;
+		border-left:1px dashed $gris4;
+
+		>:first-child{
+			position:relative;
+			width:auto;
+			flex:1;
+			padding:0 15px 0 0;
+		}
+
+		>:last-child{
+			width:45px;
+			max-width:45px;
+			padding:10px 0 0 0;
+			text-align:center;
+		}
+	}
+
+	.bEvent-status,
+	.bEvent-title,
+	.bEvent-message{
+		display:block;
+		margin:0;
+		padding:0;
+	}
+	.bEvent-title,
+	.bEvent-message{
+		color:$gris3;
+		padding:0;
+	}
+
+	.bEvent-status{
+		color:$alpha-color;
+		font-family:$font-BL;
+		font-size:1.6rem;
+	}
+
+	.bEvent-title{
+		margin:5px 0 0 0;
+		line-height:1;
+		font-family:$font-B;
+	}
+	.bEvent-message{
+		margin:3px 0 0 0;
+	}
+
+//>Les blocs de notification
+.notification{
+	@extend .flex-container;
+	align-items:center;
+	padding:17px 29px;
+	font-family:$font-M;
+	font-weight:400;
+	box-shadow: 0px 0px 30px 0px rgba(0, 0, 0, 0.20); /* offset-x | offset-y | blur-radius | spread-radius | color */
+	
+	@each $notiStatus, $notiColor, $notiStatusIco in $notification-list {
+		&.notification--#{$notiStatus} {
+			background-color:$notiColor;
+			.message{
+				&:before{
+					content:'#{$notiStatusIco}';
+					//content:#{$notiStatusIco};
+					//content:'\f013';
+				}
+			}
+		}
+	}
+	.message{
+		width:auto;
+		flex:1;
+		padding:0 8px 0 0;
+		color:$color3;
+		font-family:$font-M;
+		b,strong{
+			font-family:$font-BL;
+		}
+		&:before{
+			@extend %awesomefontme;
+			margin-right:6px;
+		}
+	}
+	.close{
+		color:$color3;
+		border-color:$base-background;
+		background-color:transparent;
+	} 
+	>:last-child{
+		max-width:45px;
+		width:45px;
+		text-align:center;
+	}
+}//.notification
+
+//>Les blocs de commentaires
+.bComments{
+	@extend .flex-container;
+	padding:0 0 15px 0;
+	>:first-child{
+		max-width:38px;
+		width:38px;
+		padding:15px 0 0 0;
+		img{
+			border-radius:50%;
+			background-color:$gris1;
+		}
+	}
+	>:last-child{
+		width:auto;
+		flex:1;
+		padding:15px 0 0 0;
+		margin:0 0 0 20px;
+		border-top:1px dashed $gris4;
+		b,strong{
+			font-family:$font-B;
+		}
+
+	}
+	& + .bComments {
+		margin-top:20px;
+	}
+}
+	.bComments-message{
+		margin:5px 0 0 0;
+		font-family:$font-M;
+	}
+	.bComments-pj{
+		>span{
+			display:block;
+			margin:8px 0;
+			font-size:1.2rem;
+			color:$color5;
+			text-transform:uppercase;
+		}
+		a{
+			margin:2px 0;
+			padding:1px 0;
+			display:block;
+			line-height:1;
+		}
+	}
+
+
+//>Barra d'avancement(0<->100) [Jauge]
+.jauge{
+	position:relative;
+	min-height:5px;
+	min-width:120px;
+	background-color:$gris1;
+	//border-radius: 0;
+	overflow:hidden;
+}
+	.jauge-progression{
+		position:absolute;
+		width:100%;
+		height:100%;
+		left:-100%;
+		background-color:$alpha-background;
+		transform: translateX(0) translateZ(0);
+		[data-progress] &{
+			//transform: translateX(attr(data-progress)+%); //Ne fonctionne pas dommage ;)
+		}
+		@for $i from 1 through 100 {
+			[data-progress="#{$i}"] &{
+				transform: translateX($i+%);
+			}
+		}
+	}
+
+/*
+ * Permet de fixed les elements
+ * Fixe l'élément enfant
+ * .fixedChild--isFixed est ajoutée en JS
+*/
+.fixedChild{
+	&.fixedChild--isFixed{
+		>*{
+			position:fixed;
+			z-index:+20;
+			background-color:#fff;
+		}
+	}
+}
+
+//>Loader
+//Ressources en ligne : http://tobiasahlin.com/spinkit/
+.loader{
+	display:none;
+	padding:10px 0;
+	text-align:center;
+	//filter:grayscale(100%);
+}
+
+.spinner {
+  margin: 100px auto;
+  width: 50px;
+  height: 40px;
+  text-align: center;
+  font-size: 10px;
+}
+.spinner > div {
+  background-color: $alpha-background;
+  height: 100%;
+  width: 6px;
+  display: inline-block;
+  
+  -webkit-animation: sk-stretchdelay 1.2s infinite ease-in-out;
+  animation: sk-stretchdelay 1.2s infinite ease-in-out;
+}
+
+.spinner .rect2 {
+  -webkit-animation-delay: -1.1s;
+  animation-delay: -1.1s;
+}
+
+.spinner .rect3 {
+  -webkit-animation-delay: -1.0s;
+  animation-delay: -1.0s;
+}
+
+.spinner .rect4 {
+  -webkit-animation-delay: -0.9s;
+  animation-delay: -0.9s;
+}
+
+.spinner .rect5 {
+  -webkit-animation-delay: -0.8s;
+  animation-delay: -0.8s;
+}
+
+@-webkit-keyframes sk-stretchdelay {
+  0%, 40%, 100% { -webkit-transform: scaleY(0.4) }  
+  20% { -webkit-transform: scaleY(1.0) }
+}
+
+@keyframes sk-stretchdelay {
+  0%, 40%, 100% { 
+    transform: scaleY(0.4);
+    -webkit-transform: scaleY(0.4);
+  }  20% { 
+    transform: scaleY(1.0);
+    -webkit-transform: scaleY(1.0);
+  }
+}
+//End spinner

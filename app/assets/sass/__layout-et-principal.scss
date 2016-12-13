@@ -1,0 +1,167 @@
+@charset "utf-8";
+body{
+	-webkit-font-smoothing : antialiased; //Pr safarie et chrome sur mac sinon les polices sont un poil plus grasse. ATTENTION NE pas commenter même avec un autoprefixer
+	font-smoothing : antialiased;
+	-webkit-text-size-adjust:none;
+	text-size-adjust:none;
+	-moz-osx-font-smoothing: grayscale;//Pr ff sinon sur mac les polices sont un poil plus grasse
+
+	/*background-image:url(../images/css/bg-white.gif);
+	background-position:left top;
+	background-repeat:repeat;
+	background-color:$base-background;*/
+}
+a{
+	text-decoration:none;
+	&.transition{
+		//transition:all 0.15s ease 0s;
+	}
+	//&:hover, &:focus, &:active {
+	&:hover{
+		//color:$base-color;
+	}
+}
+b,
+strong{
+	font-weight:400;
+	font-family:$font-B;
+}
+p{
+	//font-size:1.667rem;
+	//line-height:1.249;
+	a{
+		&:hover{
+			text-decoration:underline;
+		}
+	}
+}
+ul{
+	li + li{
+		margin-top:8px;
+	}
+}
+*{
+	-webkit-tap-highlight-color:transparent;
+
+	/* test patch flckering ( ne pas pas faire sur *  mais que element concernés )
+    -webkit-transform: translateZ(0);
+    -moz-transform: translateZ(0);
+    -ms-transform: translateZ(0);
+    -o-transform: translateZ(0);
+    transform: translateZ(0);
+
+	-webkit-backface-visibility: hidden;
+	backface-visibility: hidden;
+
+	// semble resoudre le clignottement sur grnades images au scroll - a appliquer juste sur elements concernés
+	-webkit-transform-style: preserve-3d;
+ 	*/
+}
+
+::selection {
+  background: $base-background ;
+  color: $base-color; }
+::-moz-selection {
+  background: $base-background ;
+  color: $base-color; }
+::-webkit-selection {
+  background: $base-background ;
+  color: $base-color; }
+::-khtml-selection {
+  background: $base-background ;
+  color: $base-color; }
+
+
+/* ----------------------------------------------------- */
+/* ==Les LAYOUTS      								     */
+/* Uniquement le  placement du contenair			  	 */
+/*														*/
+/*	margin, padding, float, top, left, position,...		*/
+/* ----------------------------------------------------- */
+body{}
+
+.l-header,
+.l-centreSite,
+.l-footer,
+.contentSite{
+	//position:relative;
+	margin:0;
+	padding:0;
+	//z-index:2; //Ca crée un peut le bazard quand on met un z-index partout par defaut
+}
+
+
+.l-header{}
+
+
+
+.l-footer{}
+.l-centreSite{}
+.contentSite{
+	//max-width:$largeurMaxContent;
+	margin:0 auto;
+	padding:0;
+	//border:dotted lightpink 1px;
+	&.contentSite--plr{
+		//padding:0 $site-PRL 0 $site-PRL;
+	}
+}
+
+
+/* ------------------------------------------------ */
+/* ==Les styles des div principales    				*/
+/* ------------------------------------------------ */
+.header,
+.centreSite,
+.footer
+{
+
+}
+
+.header{}
+
+
+
+.footer{
+	//box-shadow: inset 0 1px 3px rgba(0,0,0,.3) /* légère ombre interne */
+	//box-shadow: 0px -0px 5px $primary-background ;
+	//La première valeur indique le décalage horizontal vers la droite
+	//le deuxième correspond au décalage vertical vers le bas
+	//le chiffre suivant indique la force du dégradé
+	//et enfin, la couleur
+}
+
+.centreSite{
+	//padding:10px 0 0 0;
+	//background-color:#f7f7f7;
+	//border-top:1px solid $gris;
+}
+
+/* ------------------------------------------------------------------*/
+/* ==Les éléments dans le header, navigbar et footer. 
+/* Le style du header ou du footer sont dans layout principal
+/* ------------------------------------------------------------------*/
+
+/* ----------------------------- */
+/* ==Header                      */
+/* ----------------------------- */
+.header{
+
+}//END .header
+
+
+
+/* ----------------------------------------------- */
+/* ==Bandeau header du contenu principal 	       */
+/* ----------------------------------------------- */
+
+
+.centreSite-content{
+	margin:0px 0 0 0;
+	//padding:0 0 0 $pLCPr;
+}
+
+/* ----------------------------- */
+/* ==Footer 		             */
+/* ----------------------------- */
+.footer{}//END Footer

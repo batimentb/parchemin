@@ -1,0 +1,99 @@
+// Config file and project variables
+
+// font sizes
+$base-font-size : 1.4rem; // ex. 1.6rem would be "16px" equivalent
+$line-height    : 1.5; // equiv line-height 1.5
+$h1-size        : 10.0rem; //
+$h2-size        : 5.0rem; //
+$h3-size        : 3.0rem; //
+$h4-size        : 1.6rem; //
+$h5-size        : 1.2rem; //
+$h6-size        : 1.15rem; //
+
+
+// color scheme
+$color1    : #565656;
+$color2    : #464646;
+$color3    : #fff;
+$color4    : #f0f0f0;
+$color5    : #aeaeae;
+$color6    : #5568f4; //f45558
+$color7    : #a055f4; //f79b59
+
+$cVertClair:#7adaa3;
+$cVert:#568331;
+$cRouge : #e31b15;
+
+$gris1:#eeeeee;
+$gris2:#e4e4e4;
+$gris3:#848484;
+$gris4:#dbdbdb;
+
+// colors used
+// font
+$base-color: $color1;
+$alpha-color            : $color2; // text color on primary elements
+$beta-color             : $color7; // text color on secondary elements
+
+$headings-color         : $color2; // text color on headings
+$headings-1-color       : $color7; // text color on headings level 1
+
+
+// backgrounds
+$base-background  : $color3;
+$alpha-background : $color7; // primary elements background color
+$beta-background  : $color7 ; // secondary elements background color
+
+//Link
+$link-color: $cRouge;
+$link-hover-color: $color2;
+
+//->Variables de dimension
+//$widthReference : 1840;//La largeur de référence dans le psd pour calculer les % (attention cette valeur impacte)
+
+//$largeurSite:1400; // largeur max du site
+//$largeurMaxContent:960;  // largeur max du contenu du site
+//$largeurMinSite:0; //largeur mini du site
+
+//$largeurSideBarNav:79;//barre fixe de navigation (en pixel)
+//$hauteurHeader-Min:80;//Header (en pixel)
+//$hauteurFooter:0;//Footer (en pixel) //51
+
+//$pLC:34px;//Padding left contenu principal
+//$pLCPr: percentage(34 / $widthReference); //En pourcentage
+
+//XXXXX
+//$blocages: (reservation: #8fb6d7, li: #df5664, entretient: #2fafb1, stage: #ec87bf, ecole: #ac92ed, tournois: #a7df56,  ferme: #9e9e9e,  libre: rgba(#929397, 0.10));
+$badges: (1: $cRouge, 2: #f88b7f, 3: #f5c8a3, 4: $cVertClair, 5: $color5, 6: #7ad5da);
+
+$notification-list: (
+	(succes, $cVertClair, '\f00c'),
+	(error, $cRouge , '\f0e7'),
+	(carreful, #f5c8a3, '\f071'),
+	(information, #7ad5da, '\f05a'),
+);
+
+
+
+
+
+$types: text #474747, photo #D86043, photoset #D86043, quote #F19F35, link #57BC8A, chat #4EA8D7, video #77828D, audio #AB7DC2, answer #036564;
+@each $type in $types {
+     .post-type-#{nth($type, 1)} .post-icon{
+        background: nth($type, 2);
+    }
+}
+
+
+//->Les typo selon la graisse
+$font-R:  "ralewayregular", "Helvetica Neue", Helvetica, Arial, sans-serif !default; //400
+$font-M:  "ralewaymedium", $font-R;//500
+//$font-SB:  "ralewaysemibold", $font-R;//600
+$font-B:  "ralewaybold", $font-R;//700
+$font-EB:  "ralewayextrabold", $font-M;//800
+$font-BL:  "ralewayblack", $font-EB;//900 (heavy)
+
+// font stacks
+$font-stack-common    : $font-R, sans-serif !default; // common font
+$font-stack-headings  : $font-EB, sans-serif !default; // headings font
+$font-stack-monospace : consolas, courier, monospace !default; // monospace font

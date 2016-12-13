@@ -1,0 +1,174 @@
+@charset "utf-8";
+/* ----------------------------- */
+/* ==Mixin 						           */
+/* ----------------------------- */
+
+//BG dans la zone de separation/actions/titre juste sous le header
+@mixin bg_sous_header($opacity:0.02){
+  background-color:rgba(#000, $opacity);
+}
+
+
+//Mixin coin arrondi
+@mixin coin_arrondi_complet ($tl:0, $tr:0, $br:0, $bl:0){
+  border-top-left-radius: $tl;
+  border-top-right-radius: $tr;
+  border-bottom-right-radius: $br;
+  border-bottom-left-radius: $bl;
+}
+//@include coin_arrondi_complet(5px, 10px, 20%, 3px);
+
+//Centrer des éléments
+@mixin center($position) {
+  position: absolute;
+
+  @if $position == 'vertical' {
+    top: 50%;
+    transform: translateY(-50%);
+  }
+
+  @else if $position == 'horizontal' {
+    left: 50%;
+    transform: translate(-50%);
+  }
+
+  @else if $position == 'both' {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+}
+
+//Afficher et masque un element avec une transition
+@mixin fade($type) {
+  @if $type == 'hide' {
+    visibility: hidden;
+    opacity: 0;
+    transition: visibility 1s, opacity 1s;
+  }
+
+  @else if $type == 'show' {
+    visibility: visible;
+    opacity: 1;
+    transition: visibility 1s, opacity 1s;
+  }
+}
+
+//Permet d'avoir un fallback pour les navigateur ne prenant pas en compte une couleur rgba
+@mixin rgba-background($hexcolor, $opacity) {
+  background-color: $hexcolor;
+  background-color: rgba($hexcolor, $opacity); 
+}
+
+//Background rayé bicolore
+//Modification du mixin de bootstrap
+@mixin gradient-striped--H($color: rgba(135,135,135,0.85 ), $color2: rgba(170,170,170,0.85), $angle: -45deg) {
+  background-image: repeating-linear-gradient($angle, $color, $color 5px, $color2 5px, $color2 10px);
+}
+
+@mixin gradient-striped--Two($angle: -45deg, $angle2: 90deg) {
+
+   /*background: repeating-linear-gradient( $angle, transparent, transparent 9px, rgba(230, 230, 230, 0.20) 10px, rgba(230, 230, 230, 0.20) 10px, transparent 11px), 
+  repeating-linear-gradient( $angle, $color7, $color6 100%);//*/
+
+  background: repeating-linear-gradient( $angle, transparent, transparent 9px, rgba(244, 85, 88, 0.15) 10px, transparent 11px), 
+  repeating-linear-gradient( $angle2, $color6, $color6 52%, $color7 100%);
+
+  //background-image: repeating-linear-gradient($angle, $color6, $color7 5px, $color2 5px, $color2 10px);
+}
+@mixin gradient-classic--Two( $angle: 90deg) {
+  background: repeating-linear-gradient( $angle, $color6, $color6 52%, $color7 100%);
+}
+
+@mixin gradient-striped--Three($angle: -45deg, $angle2: 90deg) {
+  background: repeating-linear-gradient( $angle, transparent, transparent 9px, rgba(112, 96, 236, 0.35) 10px, transparent 11px), 
+  repeating-linear-gradient( $angle2, $color6, $color6 52%, $color7 100%);
+}
+
+
+@mixin gradient-grey--striped($angle: -45deg, $angle2: 90deg) {
+  background: repeating-linear-gradient( $angle, transparent, transparent 9px, rgba(232, 232, 232, 0.99) 10px, transparent 11px), 
+  repeating-linear-gradient( $angle2, #f3f2f2, #f2f1f1 50%, #f2f1f1 100%);
+}
+@mixin gradient-grey($angle: 90deg) {
+
+  background: repeating-linear-gradient( $angle, #f3f2f2, #f2f1f1 50%, #f2f1f1 100%);
+}
+
+/*
+  background: repeating-linear-gradient(
+    to right,
+    #f6ba52,
+    #f6ba52 10px,
+    #ffd180 10px,
+    #ffd180 20px
+  );
+*/
+
+
+
+//Ce qui est ci-dessous est DEPRECATED !!
+
+//Mixin  transform-style DEPRECATED
+//pour les transformation 3d il faut souvent mettre "transform-style: preserve-3d;" pour preserver le rendu
+@mixin transformStyle ($transStyle){
+//-webkit-transform-style:$transStyle;
+//-moz-transform-style: $transStyle;
+//-ms-transform-style: $transStyle;
+//-o-transform-style: $transStyle;
+transform-style:$transStyle;
+}
+
+
+
+//Mixin  translate3d
+// DEPRECATED
+@mixin translate3d ($x, $y, $z){
+//-webkit-transform: translate3d($x, $y, $z);
+// -moz-transform: translate3d($x, $y, $z);
+transform: translate3d($x, $y, $z);
+}
+
+// DEPRECATED
+@mixin transformOrigin ($top:50%, $left:50%){
+//-ms-transform-origin: $top $left; /* IE 9 */
+//-moz-transform-origin: $top $left; /* mozilla*/
+//-webkit-transform-origin: $top $left; /* Chrome, Safari, Opera */
+transform-origin: $top $left;
+}
+//Exemple utilisation : @include transformOrigin(20% 50%); || @include transformOrigin(20px 60px);
+//  @include transformOrigin( top 20px left 60px); //Il est possible de changer cette valeur en utilisant un mot-clef de position (top, right, bottom, left) suivi d'une valeur chiffrée dont l'unité peut varier (px, %, etc.)
+
+@mixin animation ($duration, $animation:none, $delay:0, $fillmode:none) {
+/*-webkit-animation-delay: $delay;
+-webkit-animation-duration: $duration;
+-webkit-animation-name: $animation;
+-webkit-animation-fill-mode: $fillmode;
+
+-moz-animation-delay: $delay;
+-moz-animation-duration: $duration;
+-moz-animation-name: $animation;
+-moz-animation-fill-mode: $fillmode;
+
+-o-animation-delay: $delay;
+-o-animation-duration: $duration;
+-o-animation-name: $animation;
+-o-animation-fill-mode: $fillmode;
+//*/
+
+animation-delay: $delay;
+animation-duration: $duration;
+animation-name: $animation;
+animation-fill-mode: $fillmode;
+/*
+pour chaque propriété individuelle de la propriété raccourcie :
+animation-name: none
+animation-duration: 0s
+animation-timing-function: ease
+animation-delay: 0s
+animation-iteration-count: 1
+animation-direction: normal
+animation-fill-mode: none
+animation-play-state: running
+*/
+}

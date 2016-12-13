@@ -1,0 +1,255 @@
+@charset "utf-8";
+/* ------------------------------------ */
+/* ==Menus                      	 	*/
+/* Le style des items des menus         */
+/* pas de positionnement des menus ici  */
+/* ------------------------------------ */
+.navtoogle{
+	display:none;
+	position:relative;
+	width:28px;
+	height:20px;
+	line-height:28px;
+	padding:0;
+	text-align: center;
+	font-size: 1.9rem;
+	font-style:normal;
+	background: transparent;
+	border: none;
+	cursor: pointer;
+	text-indent:2000px;
+	overflow:hidden;
+	z-index:10;
+	&:before{}
+	&:after{}
+}
+
+.menu{
+	a{
+		text-decoration:none;
+	}
+}
+
+//Menu horizontal
+.menu--h{
+	margin:0;
+	padding:0;
+	> li{
+		display:inline-block;
+	}
+}
+
+//-->Style Menu principal du site
+.menu-p{
+	padding:0;
+	margin:0;
+
+	ul{
+		margin:0;
+		padding:0;
+		list-style-type: none; /* on annule la puce par défaut */
+		list-style:none;
+	}
+
+	li{
+		padding:0;
+		margin:0;
+		&:before{}
+	}
+	a{
+		display:block;
+		margin:0;
+		padding:14px 0;
+		//font-size:4.2rem;
+		line-height:0.7;
+		color:#fff;
+		text-align:center;
+		border-bottom:1px dashed rgba(255, 255, 255, 0.07);
+		&:hover{
+			background:rgba($alpha-background, 0.2);
+		}
+		svg{
+			max-width:80%;
+			width:46px;
+			height:auto;
+			fill: #FFFFFF;
+			stroke: transparent;
+			stroke-width: 0px;
+		}
+		i{
+			font-size:4.2rem;
+		}
+		span{
+			display:inline-block;
+			margin:6px 0 0 0;
+			font-family:'sans-serif';
+			font-weight:300;
+			font-size:1.2rem;
+			line-height:normal;
+			text-transform:uppercase;
+		}
+	}
+	li.active{
+
+		a{
+			background:$alpha-color;//#8d8e8e
+		}
+	}
+	li.settings{
+		a{
+			border-top:1px dashed rgba(255, 255, 255, 0.07);
+			border-bottom:none;
+		}
+		svg{
+			.st0{fill:#FFFFFF;stroke:#fff;stroke-width:14;stroke-miterlimit:10;}
+			.st1{fill:none;stroke:#fff;stroke-width:14;stroke-miterlimit:10;}
+		}
+	}
+
+}//End menu-p (principal)
+
+.menu-p--littleFat{
+	
+	a{
+		font-size:1.0rem;
+		line-height:1.8rem;
+	}
+}
+
+//>Menu cressamblant au style title2
+.nav-tabs-0{
+	border-bottom:1px dashed $gris1;
+	
+	li{
+		display:inline-block;
+		float:left;
+		margin:0;
+	}
+	li + li {
+		margin-left:32px;
+	}
+
+	li a{
+		padding:19px 3px;
+		font-size:1.40rem;
+		font-weight:400;
+		line-height:(14.36/14.0);
+		color:$headings-1-color;
+		font-family:$font-M;
+		text-transform:uppercase;
+		border-bottom:4px solid transparent;
+		opacity:0.40;
+	}
+
+	li.active a{
+		font-family:$font-BL;
+		color:$headings-1-color;
+		background-color:transparent;
+		border-bottom:4px solid $alpha-background;
+		opacity:1;
+	}
+
+	li.active a:hover,
+	li a:hover{
+		color:$headings-1-color;
+		background-color:transparent;
+		border-bottom:4px solid $alpha-background;
+	}
+}
+
+
+/* ---------------------------------------------- */
+/* ==NAV 	   		  					          */
+/* ---------------------------------------------- */
+.nav-pills--basic{
+
+	li{}
+
+	li a{
+		
+		font-size:1.733rem;
+		text-transform:uppercase;
+		color:#aab2bd;
+		white-space: nowrap;//Sinon sous chrome ca passe a la ligne apres le svg
+		border-bottom:4px solid transparent;
+		border-radius:0;
+
+		transition:border 0.15s ease 0s;
+
+		svg{
+			display:inline-block;
+			width:22px;
+			margin:-2px 12px 0 0;
+			vertical-align:middle;
+			fill:#aab2bd;
+		}
+	}
+
+	li.active a{
+		color:#aab2bd;
+		background-color:transparent;
+		border-bottom:4px solid $alpha-color;
+	}
+
+	li.active a:hover,
+	li a:hover{
+		color:#aab2bd;//434a54
+		background-color:transparent;
+		border-bottom:4px solid lighten($alpha-color, 20%);
+	}
+}
+
+.nav-pills--tuile{
+
+	li{}
+
+	li a{
+		width:168px;height:168px;
+		padding:32px 0 0 0;
+		font-size:1.733rem;
+		text-align:center;
+		text-transform:uppercase;
+		color:#fff;
+		white-space: nowrap;//Sinon sous chrome ca passe a la ligne apres le svg
+		border:1px solid rgba(190, 190, 190, 0.6);
+		border-radius:0;
+
+		transition:all 0.15s ease 0s;
+		background:#2b3f55;
+
+		svg{
+			display:block;
+			width:50px;
+			margin:0px auto 26px auto;
+			fill:#fff;
+		}
+	}
+
+
+	li.active a:hover,
+	li a:hover{
+		//border-bottom:4px solid lighten($cBleu, 20%);
+		background-color:$alpha-color;
+	}
+
+	> li + li {
+		margin-left: 15px;
+	}
+
+}
+.menu-semaine{
+	
+}
+.menu-semaine--fb{
+	> a {
+
+		width:auto;
+		flex:auto;
+	}
+
+	>:first-child,
+	>:last-child{
+		flex:1;
+		width:30%;
+	}
+}

@@ -1,0 +1,500 @@
+@charset "utf-8";
+/* ---------------------------------------------- */
+/* ==Les Elements d'un formulaire 	              */
+/* Modules, titles, btns, blocks, ...             */
+/* ---------------------------------------------- */
+
+//>Couleur de selection dans un champ texte
+input[type="text"],
+input[type="email"],
+input[type="date"],
+input[type="search"],
+input[type="tel"],
+textarea
+{
+	&::-moz-selection {
+		background:$alpha-background;
+		color:#fff;
+	}
+	&::selection {
+		background:$alpha-background;
+		color:#fff;
+	} 
+}
+//>Style du place holder
+::-webkit-input-placeholder {
+	color:$gris2;
+}
+:-moz-placeholder { /* Firefox 18- */
+	color:$gris2;
+}
+::-moz-placeholder {  /* Firefox 19+ */
+	color:$gris2;
+}
+:-ms-input-placeholder {
+	color:$gris2;
+}
+input::-moz-placeholder { color:$gris2; }
+
+//>Le labal
+label{
+	font-weight:400;
+	font-family:$font-R;
+	color:$color5;
+	font-size:1.2rem;
+	text-transform:uppercase;
+}
+
+//>Input title (spécial)
+input.title{
+	padding:13px 0;
+	font-family:$font-BL;
+	font-size:3.0rem;
+	line-height:(3.2/3.0);
+	color:$alpha-color;
+	border:none;
+	border-bottom:1px solid $gris1;
+	
+	&.focus,
+	&:focus{
+		border-color:$cVertClair;
+	}
+}
+//>Input
+	select,
+	input,
+	textarea{
+		display:inline-block;
+		padding:11px 13px;
+		font-weight:400;
+		color:$alpha-color;
+		font-family:$font-M;
+		background-color:$base-background;
+		border:1px solid $gris2;
+		border-radius:0;
+		outline: none;
+		-webkit-focus-ring-color: none;
+		border-radius: 0;
+		appearance: none;
+	}
+	textarea{
+		line-height:normal;
+		width:100%;
+		height:210px;
+	}
+	[type="text"],
+	[type="email"],
+	[type="password"]
+	{
+		//width:100%;
+		min-width:200px;
+		&.focus,
+		&:focus{
+			border-bottom-color:$cVertClair;
+		}
+	}
+
+//>Select customisé
+%formSelect,
+.formSelect{
+	border-radius:0;
+	cursor:pointer;
+	background-image:url('../images/css/select-chevron-full--black-x1.png');
+	background-position: calc(100% - 12px - 10px) 50% ;
+	background-size: 5px 3px;
+	background-repeat: no-repeat;
+	max-width:100%;//Fix debordement sur petit device
+	min-width:200px;
+	&:focus{
+		outline-offset: -2px;
+		outline:transparent;
+		//border-bottom-color:red;
+	}
+
+&:-moz-focus-inner,
+&:-webkit-focus-inner,
+&:focus-inner
+{
+    border:0;
+}
+&:focus{-moz-outline-style: none;}
+
+	option{
+		margin:0;
+		padding:0;
+		&:hover,
+		&:active{
+			background: rgba(20, 20, 20, 0.2);
+ 		}
+	}
+
+	option {
+		color: red;
+	}
+	option:checked {
+		color:green;
+		border-bottom-color:$cVertClair;
+	}
+
+	option:hover,
+	option:focus,
+	option:active,
+	option:checked {
+		background: linear-gradient(#5A2569, #5A2569);
+	}
+}
+//Pour supprimer la fleche de base dans IE
+.basiqForm .formSelect::-ms-expand,
+.formSelect::-ms-expand {
+	display: none;
+}
+
+//>Personnalisation des checkbox et btn radio
+.formCase{
+	/* Cachons la case à cocher */
+	[type="checkbox"]:not(:checked),[type="radio"]:not(:checked),
+	[type="checkbox"]:checked,[type="radio"]:checked
+	{
+		position: absolute;
+		left: -9999px;
+	}
+	/* on prépare le label */
+	[type="checkbox"]:not(:checked) + label, [type="radio"]:not(:checked) + label,
+	[type="checkbox"]:checked + label, [type="radio"]:checked + label{
+		position: relative; /* permet de positionner les pseudo-éléments */
+		display:inline-block;
+		padding-left: 30px; /* fait un peu d'espace pour notre case à venir */
+		cursor: pointer;    /* affiche un curseur adapté */
+		color:$alpha-color;
+		font-size:1.4rem; 
+
+		text-rendering: auto;
+		-webkit-font-smoothing: antialiased;
+		-moz-font-smoothing: antialiased;
+		font-smoothing: antialiased;
+		-moz-osx-font-smoothing: grayscale;
+		osx-font-smoothing: grayscale;//*/
+	}
+	[type="checkbox"]:not(:checked) + label, [type="radio"]:not(:checked) + label{
+		color: $base-color;
+	}
+
+
+	/* Aspect des checkboxes ET radios */
+	/* :before sert à créer la case à cocher */
+	[type="checkbox"]:not(:checked) + label:before, [type="radio"]:not(:checked) + label:before,
+	[type="checkbox"]:checked + label:before, [type="radio"]:checked + label:before {
+		display:inline-block;
+		content: '';
+		position: absolute;
+		margin:0;
+		left:10px; top: 50%;
+		width: 17px; height: 17px; /* dim. de la case */
+		transform: translateX(-50%) translateY(-50%);
+		border: 1px solid $gris2;
+		background: $base-background;
+		box-sizing:border-box;
+		border-radius: 50%; /* angles arrondis */
+		//box-shadow: inset 0 1px 3px rgba(0,0,0,.05) /* légère ombre interne */ 
+		box-shadow:none;
+		//@include transformStyle(preserve-3d);
+	}
+
+	/* Aspect général de la coche */
+	[type="checkbox"]:checked + label:before, [type="radio"]:checked + label:before {
+		background-color:$cVertClair;
+		border-color:darken($cVertClair, 20%);
+	}
+
+	[type="checkbox"]:not(:checked) + label:after, [type="radio"]:not(:checked) + label:after,
+	[type="checkbox"]:checked + label:after, [type="radio"]:checked + label:after {
+		display:inline-block;
+		//content: '✔';
+		content:'';
+		position: absolute;
+		width:7px;height:7px;
+		left:10px;top:50%;
+		//font-size: 14px;
+		background-color:$base-background;
+		transition: all .2s; /* on prévoit une animation */
+		box-sizing:border-box;
+		border-radius: 50%; /* angles arrondis */
+	}
+	/* Aspect si "pas cochée" */
+	[type="checkbox"]:not(:checked) + label:after, [type="radio"]:not(:checked) + label:after {
+		opacity: 0; /* coche invisible */
+		transform:  translateX(-50%) translateY(-50%); /* mise à l'échelle à 0 */
+	}
+	/* Aspect si "cochée" */
+	[type="checkbox"]:checked + label:after, [type="radio"]:checked + label:after{
+		opacity: 1; /* coche opaque */
+		transform:  translateX(-50%) translateY(-50%); /* mise à l'échelle 1:1 */
+	}
+
+
+	/* Aspect des checkboxes */
+		/* :before sert à créer la case à cocher */
+		[type="checkbox"]:not(:checked) + label:before,
+		[type="checkbox"]:checked + label:before{
+			border-radius: 1%; /* angles arrondis */
+		}
+		/* Aspect général de la coche */
+		[type="checkbox"]:not(:checked) + label:after,
+		[type="checkbox"]:checked + label:after {
+			border-radius: 1%; /* angles arrondis */
+		}
+}
+
+.formCase--pleine{
+	/* on prépare le label */
+	[type="checkbox"]:not(:checked) + label, [type="radio"]:not(:checked) + label,
+	[type="checkbox"]:checked + label, [type="radio"]:checked + label{
+		padding: 9px 15px;
+		font-size:1.2rem;
+		font-weight:400;
+		color:$gris1;
+		font-family:$font-M;
+		border:1px solid #e1e1e1;
+		border-radius:5px;
+		background-color:transparent;
+		text-align: center;
+		transition: background-color .25s, color .15s; /* on prévoit une animation */
+	}
+	/* Aspect des checkboxes */
+	/* :before sert à créer la case à cocher */
+	[type="checkbox"]:not(:checked) + label:before, [type="radio"]:not(:checked) + label:before,
+	[type="checkbox"]:checked + label:before, [type="radio"]:checked + label:before {
+		content: '';
+		display:none;
+	}
+
+	/* Aspect général de la coche */
+	[type="checkbox"]:not(:checked) + label:after, [type="radio"]:not(:checked) + label:after,
+	[type="checkbox"]:checked + label:after, [type="radio"]:checked + label:after {
+		content:'';
+		display:none;
+	}
+
+	/*Aspect du label une fois la case coché*/
+	[type="checkbox"] + label:hover, [type="radio"] + label:hover{
+		color:$beta-color;
+		background-color:$alpha-background;
+	}
+	[type="checkbox"]:checked + label, [type="radio"]:checked + label{
+		color:$beta-color;
+		border:1px solid transparent;
+		background-color:$base-background;
+	}
+
+}
+
+
+
+
+
+
+
+
+//-->Css formulaires generique __:
+//------------------------------------------------------------------------------------
+.basiqForm{
+
+
+	//Personnalisation des checkbox
+	.case{
+		display:inline-block;
+		margin:0 10px 0 0;
+	}
+		/* Cachons la case à cocher */
+		[type="checkbox"]:not(:checked),[type="radio"]:not(:checked),
+		[type="checkbox"]:checked,[type="radio"]:checked
+		{
+			position: absolute;
+			left: -9999px;
+		}
+		/* on prépare le label */
+		[type="checkbox"]:not(:checked) + label, [type="radio"]:not(:checked) + label,
+		[type="checkbox"]:checked + label, [type="radio"]:checked + label{
+			position: relative; /* permet de positionner les pseudo-éléments */
+			display:inline-block;
+			margin:0;
+			padding-left: 25px; /* fait un peu d'espace pour notre case à venir */
+			cursor: pointer;    /* affiche un curseur adapté */
+
+			text-rendering: auto;
+			-webkit-font-smoothing: antialiased;
+			-moz-font-smoothing: antialiased;
+			font-smoothing: antialiased;
+			-moz-osx-font-smoothing: grayscale;
+			osx-font-smoothing: grayscale;//*/
+		}
+		/* Aspect des checkboxes */
+		/* :before sert à créer la case à cocher */
+		[type="checkbox"]:not(:checked) + label:before, [type="radio"]:not(:checked) + label:before,
+		[type="checkbox"]:checked + label:before, [type="radio"]:checked + label:before {
+			display:inline-block;
+			content: '';
+			position: absolute;
+			margin:0;
+			left:10px; top: 50%;
+			width: 20px; height: 20px; /* dim. de la case */
+			transform: translateX(-50%) translateY(-50%);
+			border: 0px solid #646464;
+			background: $base-background ;
+			box-sizing:border-box;
+			border-radius: 50%; /* angles arrondis */
+			//box-shadow: inset 0 1px 3px rgba(0,0,0,.3) /* légère ombre interne */
+			//@include transformStyle(preserve-3d);
+		}
+
+		/* Aspect général de la coche */
+		[type="checkbox"]:not(:checked) + label:after, [type="radio"]:not(:checked) + label:after,
+		[type="checkbox"]:checked + label:after, [type="radio"]:checked + label:after {
+			display:inline-block;
+			//content: '✔';
+			content:'';
+			position: absolute;
+			width:8px;height:8px;
+			left:10px;top:50%;
+			//font-size: 14px;
+			//color: #09ad7e;
+			background-color:$alpha-background;
+			transition: all .2s; /* on prévoit une animation */
+			box-sizing:border-box;
+			border-radius: 50%; /* angles arrondis */
+		}
+		/* Aspect si "pas cochée" */
+		[type="checkbox"]:not(:checked) + label:after, [type="radio"]:not(:checked) + label:after {
+			opacity: 0; /* coche invisible */
+			transform:  translateX(-50%) translateY(-50%); /* mise à l'échelle à 0 */
+		}
+		/* Aspect si "cochée" */
+		[type="checkbox"]:checked + label:after, [type="radio"]:checked + label:after{
+			opacity: 1; /* coche opaque */
+			transform:  translateX(-50%) translateY(-50%); /* mise à l'échelle 1:1 */
+		}
+	//Fin de personnalisation des checkbox
+
+	[type="submit"],
+	[type="reset"]
+	{
+		display:block;
+		appearance: none;
+		border:none;
+
+		background:$alpha-background;
+		color:$base-color;
+		height:auto;
+		padding:6px 10px;
+		margin:0;
+		border:none;
+		text-align:center;
+		font-size: 1.2rem;
+		text-transform:uppercase;
+		border-radius:0;
+		transition:opacity 0.20s ease 0s;
+		opacity:1;
+		&:hover{
+			opacity:0.65;
+		}
+	}
+	.basiqForm-champsObligatoires{
+		font-size:1.095rem;
+	}
+}// .basiqForm
+
+/* ---------------------------------------------- */
+/* == Validation de formulaire	        	      */
+/* parsley js       						      */
+/* ---------------------------------------------- */
+
+input.info-manquante{
+  background: $cRouge;
+  color:#FFF;
+}
+
+/*
+ * Parsley js || Customs Js (utiliser les classe : field-)
+*/
+input.field-success,
+//input.parsley-success,
+select.field-success,
+//select.parsley-success,
+textarea.field-success,
+//textarea.parsley-success
+{
+  color: #468847;
+  //background: #DFF0D8 url("../images/css/form-ok.png") no-repeat right center;
+  //background-size:29px 22px;
+  border: 1px solid #D6E9C6;
+}
+
+input.field-error,
+//input.parsley-error,
+select.field-error,
+//select.parslley-error,
+textarea.field-error,
+//textarea.parsley-error
+{
+  //color: #B94A48;
+  //background: #F2DEDE url("../images/css/form-nok.png") no-repeat right center;
+	&:focus,
+	&{
+		//color: $cRouge;
+		border-color: $cRouge;
+		outline: 0;
+		//box-shadow: inset 0 1px 1px rgba(0,0,0,.075),0 0 8px rgba($cRouge,.6);
+	}
+}
+
+.field-errors-list,
+.parsley-errors-list,
+{
+  margin: 6px 0 5px;
+  padding: 0;
+  list-style-type: none;
+  font-size: 0.85em;
+  //line-height: 0.85em;
+  opacity: 0;
+  color: $cRouge;
+
+  transition: all .3s ease-in;
+  -o-transition: all .3s ease-in;
+  -moz-transition: all .3s ease-in;
+  -webkit-transition: all .3s ease-in;
+  li{
+  	margin:0;
+		&:before{
+			@extend %awesomefontme;
+			margin-right:6px;
+			content:'\f0e7';
+		}
+  }
+  li + li {
+  	margin-top:2px;
+  }
+}
+
+.parsley-errors-list.filled,
+//.parsley-errors-list.filled
+{
+  opacity: 1;
+}
+
+/*
+//Cas pr les checkbox/radio personalisé
+.case.parsley-error,
+.case.parsley-error ~ .case
+{
+  border: 1px solid #ef6c53 !important;
+  //background-color:rgba(239,108,83, 0.15);
+  background:#fff url("../images/form-nok.png") no-repeat right center;
+  padding-left:10px;
+  padding-right:30px;
+
+  transition: all 0.15s ease-in;
+  -o-transition: all 0.15s ease-in;
+  -moz-transition: all 0.15s ease-in;
+  -webkit-transition: all 0.15s ease-in;
+}//*/
+

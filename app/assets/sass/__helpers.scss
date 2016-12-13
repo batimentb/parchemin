@@ -1,0 +1,117 @@
+@charset "utf-8";
+/* ---------------------------------------------- */
+/* ==Les Elements qui se repetent                 */
+/* Modules, titles, btns, blocks, ...             */
+/* ---------------------------------------------- */
+//>Sert a pour intégrer une icone awesomefonts via le css
+%awesomefontme{
+	display: inline-block;
+    //font: normal normal normal 14px/1 FontAwesome;
+    font-weight: normal;
+    font-family:FontAwesome;
+    font-size: inherit;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-font-smoothing: antialiased;
+    font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    osx-font-smoothing: grayscale;
+}
+//>Sert a pour intégrer une icone bootstrapfont via le css
+/*%glyphiconme{
+    position: relative;
+    top: 1px;
+    display: inline-block;
+    font-family: 'Glyphicons Halflings';
+    font-style: normal;
+    font-weight: normal;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}*/
+
+/* ----------------------------- */
+/* ==GRILLES 		 	         */
+/* ----------------------------- */
+//On utilise la grille de knacss et ses classes flex-box
+
+
+
+//>Aligne verticalement les box
+.grid-vCenter{
+	align-items: center;
+}
+
+
+.bloc-osef{
+	@include gradient-classic--Two;
+}
+/* ----------------------------- */
+/* ==Typographie: 				 */
+/* ----------------------------- */
+.tSmall{
+	font-size:1.2rem;
+}
+.tXSmall{
+	font-size:1.0rem;
+}
+/* ----------------------------- */
+/* =Color						 */
+/* ----------------------------- */
+.cAlpha{
+	color:$alpha-color;
+}
+.cBrown{
+	color:brown;
+}
+
+/* ----------------------------- */
+/* ==Style de Table 		 	 */
+/* ----------------------------- */
+
+.table{
+
+	> thead > tr > th {
+		border-color:$beta-background;
+	}
+
+	th{
+		font-size:1.0rem;
+		color:$headings-1-color;
+		font-weight:400;
+		font-family:$font-BL;
+		text-transform:uppercase;
+		border-color:$beta-background;
+	}
+	td{
+		font-size:1.4rem;
+		color:$headings-1-color;
+	}
+}
+
+/*
+hr{
+	display:block;
+	height:1px;
+	margin:20px 0 20px 0;
+	padding:0;
+	background:$alpha-background;
+	border-bottom:none;
+}
+*/
+
+
+/*
+ * Permet de fixed les elements
+ * Fixe l'élément enfant
+ * .fixedChild--isFixed est ajoutée en JS
+*/
+.fixedChild{
+	&.fixedChild--isFixed{
+		>*{
+			position:fixed;
+			z-index:+20;
+			background-color:#fff;
+		}
+	}
+}
