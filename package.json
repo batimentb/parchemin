@@ -1,6 +1,7 @@
 {
   "name": "batb-sav",
-  "version": "1.0.0",
+  "homepage": "https://github.com/batimentb/parchemin",
+  "version": "0.2.2",
   "description": "Parchemin CSS",
   "main": "index.js",
   "scripts": {
