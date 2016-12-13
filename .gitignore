@@ -26,7 +26,7 @@ venv
 /bower_components
 
 #Fichiers statique générés
-/compiled_static
+#/compiled_static
 
 ### Developpeur ###
 # cache files for sublime text
