@@ -18,12 +18,10 @@
 	var elementsClose = document.querySelectorAll('.modal-background, .modal-close, .modal-close-inner');
 	var index = 0;
 	for( index=0; index < elementsClose.length; index++ ) {
-		//console.log(navButtons_A[index]);
 		elementsClose[index].addEventListener('click', function (event) {
 			//event.target.innerHTML = "click count: " + event.detail;
 			//console.log(event);
 			//console.log(this);
-			//console.log(this.parentNode);
 			var modalE;
 			if (this.classList.contains("modal-close-inner")){
 				modalEl = this.parentNode.parentNode.parentNode;

@@ -13,12 +13,12 @@ input[type="tel"],
 textarea
 {
 	&::-moz-selection {
-		background:$alpha-background;
-		color:#fff;
+		background:$color6;
+		color:$color3;
 	}
 	&::selection {
-		background:$alpha-background;
-		color:#fff;
+		background:$color6;
+		color:$color3;
 	} 
 }
 //>Style du place holder
@@ -166,7 +166,8 @@ input.title{
 		padding-left: 30px; /* fait un peu d'espace pour notre case à venir */
 		cursor: pointer;    /* affiche un curseur adapté */
 		color:$alpha-color;
-		font-size:1.4rem; 
+		font-size:1.4rem;
+		text-transform:none;
 
 		text-rendering: auto;
 		-webkit-font-smoothing: antialiased;
@@ -289,129 +290,10 @@ input.title{
 }
 
 
-
-
-
-
-
-
-//-->Css formulaires generique __:
-//------------------------------------------------------------------------------------
-.basiqForm{
-
-
-	//Personnalisation des checkbox
-	.case{
-		display:inline-block;
-		margin:0 10px 0 0;
-	}
-		/* Cachons la case à cocher */
-		[type="checkbox"]:not(:checked),[type="radio"]:not(:checked),
-		[type="checkbox"]:checked,[type="radio"]:checked
-		{
-			position: absolute;
-			left: -9999px;
-		}
-		/* on prépare le label */
-		[type="checkbox"]:not(:checked) + label, [type="radio"]:not(:checked) + label,
-		[type="checkbox"]:checked + label, [type="radio"]:checked + label{
-			position: relative; /* permet de positionner les pseudo-éléments */
-			display:inline-block;
-			margin:0;
-			padding-left: 25px; /* fait un peu d'espace pour notre case à venir */
-			cursor: pointer;    /* affiche un curseur adapté */
-
-			text-rendering: auto;
-			-webkit-font-smoothing: antialiased;
-			-moz-font-smoothing: antialiased;
-			font-smoothing: antialiased;
-			-moz-osx-font-smoothing: grayscale;
-			osx-font-smoothing: grayscale;//*/
-		}
-		/* Aspect des checkboxes */
-		/* :before sert à créer la case à cocher */
-		[type="checkbox"]:not(:checked) + label:before, [type="radio"]:not(:checked) + label:before,
-		[type="checkbox"]:checked + label:before, [type="radio"]:checked + label:before {
-			display:inline-block;
-			content: '';
-			position: absolute;
-			margin:0;
-			left:10px; top: 50%;
-			width: 20px; height: 20px; /* dim. de la case */
-			transform: translateX(-50%) translateY(-50%);
-			border: 0px solid #646464;
-			background: $base-background ;
-			box-sizing:border-box;
-			border-radius: 50%; /* angles arrondis */
-			//box-shadow: inset 0 1px 3px rgba(0,0,0,.3) /* légère ombre interne */
-			//@include transformStyle(preserve-3d);
-		}
-
-		/* Aspect général de la coche */
-		[type="checkbox"]:not(:checked) + label:after, [type="radio"]:not(:checked) + label:after,
-		[type="checkbox"]:checked + label:after, [type="radio"]:checked + label:after {
-			display:inline-block;
-			//content: '✔';
-			content:'';
-			position: absolute;
-			width:8px;height:8px;
-			left:10px;top:50%;
-			//font-size: 14px;
-			//color: #09ad7e;
-			background-color:$alpha-background;
-			transition: all .2s; /* on prévoit une animation */
-			box-sizing:border-box;
-			border-radius: 50%; /* angles arrondis */
-		}
-		/* Aspect si "pas cochée" */
-		[type="checkbox"]:not(:checked) + label:after, [type="radio"]:not(:checked) + label:after {
-			opacity: 0; /* coche invisible */
-			transform:  translateX(-50%) translateY(-50%); /* mise à l'échelle à 0 */
-		}
-		/* Aspect si "cochée" */
-		[type="checkbox"]:checked + label:after, [type="radio"]:checked + label:after{
-			opacity: 1; /* coche opaque */
-			transform:  translateX(-50%) translateY(-50%); /* mise à l'échelle 1:1 */
-		}
-	//Fin de personnalisation des checkbox
-
-	[type="submit"],
-	[type="reset"]
-	{
-		display:block;
-		appearance: none;
-		border:none;
-
-		background:$alpha-background;
-		color:$base-color;
-		height:auto;
-		padding:6px 10px;
-		margin:0;
-		border:none;
-		text-align:center;
-		font-size: 1.2rem;
-		text-transform:uppercase;
-		border-radius:0;
-		transition:opacity 0.20s ease 0s;
-		opacity:1;
-		&:hover{
-			opacity:0.65;
-		}
-	}
-	.basiqForm-champsObligatoires{
-		font-size:1.095rem;
-	}
-}// .basiqForm
-
 /* ---------------------------------------------- */
 /* == Validation de formulaire	        	      */
 /* parsley js       						      */
 /* ---------------------------------------------- */
-
-input.info-manquante{
-  background: $cRouge;
-  color:#FFF;
-}
 
 /*
  * Parsley js || Customs Js (utiliser les classe : field-)
