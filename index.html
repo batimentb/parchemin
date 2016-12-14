@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="fr">
+
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -9,79 +10,89 @@
 	<link href="./dist/css/second.css" rel="stylesheet">
 
 	<style type="text/css">
-		body{
-			padding-left:28%;
+		body {
+			padding-left: 28%;
 		}
-		body > h1{
-			padding:15px 0;
-			font-size:2.2rem;
+		
+		body > h1 {
+			padding: 15px 0;
+			font-size: 2.2rem;
 		}
-		body > hr{
-			margin:1em 0;
+		
+		body > hr {
+			margin: 1em 0;
 		}
-		body > section{
-			position:relative;
-			width:80%;
-			max-width:1024px;
-			margin:6% auto;
+		
+		body > section {
+			position: relative;
+			width: 80%;
+			max-width: 1024px;
+			margin: 6% auto;
 		}
-		body > section + section{
-			margin:60px 0 0 0;
+		
+		body > section + section {
+			margin: 60px 0 0 0;
 		}
-
+		
 		section > h2,
 		section > h3,
-		.guidlineObject > div:first-child{
-			color:#959595;
+		.guidlineObject > div:first-child {
+			color: #959595;
 		}
-
-		section > h2{
-			margin-left:84px;
-			margin-bottom:80px;
-			font-size:1.6rem;
+		
+		section > h2 {
+			margin-left: 84px;
+			margin-bottom: 80px;
+			font-size: 1.6rem;
 		}
-
-		section > h3{
+		
+		section > h3 {
 			width: 110px;
 			text-align: right;
-			font-size:1.2rem;
+			font-size: 1.2rem;
 		}
-
-		body > section > section +section{
-			margin-top:100px;
+		
+		body > section > section +section {
+			margin-top: 100px;
 		}
-		.guidlineObject{
+		
+		.guidlineObject {
 			display: flex;
 			flex-direction: row;
 			flex-wrap: wrap;
 			box-sizing: border-box;
-			margin:40px 0 20px 0;
+			margin: 40px 0 20px 0;
 		}
-			.guidlineObject > div{
-				box-sizing: border-box;
-				min-width: 0;
-				min-height: 0;
-			}
-
-			.guidlineObject > div:first-child{
-				width:110px;
-				padding:0;
-				margin-right:40px;
-				text-align:right;
-				font-size:1.2rem;
-			}
-			.guidlineObject > div:nth-child(2){
-				width:auto;
-				flex:1;
-			}
+		
+		.guidlineObject > div {
+			box-sizing: border-box;
+			min-width: 0;
+			min-height: 0;
+		}
+		
+		.guidlineObject > div:first-child {
+			width: 110px;
+			padding: 0;
+			margin-right: 40px;
+			text-align: right;
+			font-size: 1.2rem;
+		}
+		
+		.guidlineObject > div:nth-child(2) {
+			width: auto;
+			flex: 1;
+		}
+		
 		body > nav {
 			position: fixed;
 			left: 1.5rem;
 			width: 25%;
 		}
-		body > nav li{
-			margin-bottom:1px;
+		
+		body > nav li {
+			margin-bottom: 1px;
 		}
+		
 		body > nav li a {
 			display: block;
 			padding: .6rem 1rem;
@@ -89,12 +100,14 @@
 			background: #eee;
 			text-decoration: none;
 		}
-	</style> 
+	</style>
 </head>
+
 <body>
-	<h1>Styleguide ‘Parchemin’ BatB Sav — v0.2.2</h1>
+	<h1>Style Guide ‘Parchemin’ v0.2.3</h1>
 	<nav>
 		<ol>
+			<li><a href="#howto">How To use Parchemin</a></li>
 			<li><a href="#typography">Typography</a></li>
 			<li><a href="#uicolours">UI color</a></li>
 			<li><a href="#components">Components</a></li>
@@ -106,81 +119,168 @@
 		</ol>
 	</nav>
 
+	<section id="howto">
+		<div>
+			<h1 class="h2-like">How to use Parchemin</h1>
+			<div class="guidlineObject">
+				<div>Via Bower</div>
+				<div>
+					<p>bower install parchemin</p>
+				</div>
+			</div>
+			<div class="guidlineObject">
+				<div>Old Fashion Way</div>
+				<div>
+					<p>Download the all repository ! </p>
+					<p class="small">(or grab the two css files below)</p>
+				</div>
+			</div>
+			<div class="guidlineObject">
+				<div>Includes the files</div>
+				<div>
+					<p>Include <a href="./dist/css/app.css" download="app.css">app.css</a> and <a href="./dist/css/second.css" download="second.css">second.css</a></p>
+				</div>
+			</div>
+			<div class="guidlineObject">
+				<div>And thats all !</div>
+				<div>
+					<p>No js required, it's just work !</p>
+				</div>
+			</div>
+			<div class="guidlineObject">
+				<div>Work with sass</div>
+				<div>
+					<p>You can also use the source files in sass format in src/sass/</p>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<hr>
+
 	<section id="typography">
 		<h2>Typography</h2>
 		<section id="typography-headings">
 			<h3>Headings</h3>
 			<div class="guidlineObject">
-				<div>H1</div><div> <h1>Lorem ipsum</h1> </div>
+				<div>H1</div>
+				<div>
+					<h1>Lorem ipsum</h1>
+				</div>
 			</div>
 			<div class="guidlineObject">
-				<div>H2</div><div> <h2>Lorem ipsum</h2> </div>
+				<div>H2</div>
+				<div>
+					<h2>Lorem ipsum</h2>
+				</div>
 			</div>
 			<div class="guidlineObject">
-				<div>H3</div><div> <h3>Lorem ipsum</h3> </div>
+				<div>H3</div>
+				<div>
+					<h3>Lorem ipsum</h3>
+				</div>
 			</div>
 			<div class="guidlineObject">
-				<div>H4</div><div> <h4>Lorem ipsum</h4> </div>
+				<div>H4</div>
+				<div>
+					<h4>Lorem ipsum</h4>
+				</div>
 			</div>
 			<div class="guidlineObject">
-				<div>H5</div><div> <h5>Lorem ipsum</h5> </div>
+				<div>H5</div>
+				<div>
+					<h5>Lorem ipsum</h5>
+				</div>
 			</div>
-		</section><!-- /#typography-headings-->
+		</section>
+		<!-- /#typography-headings-->
 
 		<section id="typography-othercopy">
 			<h3>Other Copy</h3>
 			<div class="guidlineObject">
-				<div>Paragraph</div><div> <p>Nec piget dicere avide magis hanc insulam populum Romanum invasisse quam iuste. 
-Ptolomaeo enim rege foederato nobis et socio ob aerarii nostri angustias iusso sine ulla culpa proscribi ideoque
-hausto veneno voluntaria morte deleto et tributaria facta est et velut hostiles eius exuviae classi inpositae in urbem 
-advectae sunt per Catonem, nunc repetetur ordo gestorum. (14px)</p></div>
+				<div>Paragraph</div>
+				<div>
+					<p>Nec piget dicere avide magis hanc insulam populum Romanum invasisse quam iuste. Ptolomaeo enim rege foederato nobis
+						et socio ob aerarii nostri angustias iusso sine ulla culpa proscribi ideoque hausto veneno voluntaria morte deleto
+						et tributaria facta est et velut hostiles eius exuviae classi inpositae in urbem advectae sunt per Catonem, nunc repetetur
+						ordo gestorum. (14px)</p>
 				</div>
-			
-			<div class="guidlineObject">
-				<div>Basic Link</div><div> <a href="http://batb.fr">BâtB.fr</a> </div>
 			</div>
 
 			<div class="guidlineObject">
-				<div>disclaimer text</div><div> <p class="tXSmall">Nec piget dicere avide magis hanc</p> </div>
-			</div>
-
-			<div class="guidlineObject" title="Diminue ou augmente proportionnellement la taille (classe native knacss)">
-				<div>Auto smaller ?</div><div> <p class="smaller">Nec piget dicere avide magis hanc</p> </div>
-			</div>
-			<div class="guidlineObject" title="Diminue ou augmente proportionnellement la taille (classe native knacss)">
-				<div>Auto small ?</div><div> <p class="small">Nec piget dicere avide magis hanc</p> </div>
-			</div>
-			<div class="guidlineObject" title="Diminue ou augmente proportionnellement la taille (classe native knacss)">
-				<div>Auto big ?</div><div> <p class="big">Nec piget dicere avide magis hanc</p> </div>
-			</div>
-			<div class="guidlineObject" title="Diminue ou augmente proportionnellement la taille (classe native knacss)">
-				<div>Auto bigger ?</div><div> <p class="bigger">Nec piget dicere avide magis hanc</p> </div>
-			</div>
-			<div class="guidlineObject" title="Diminue ou augmente proportionnellement la taille (classe native knacss)">
-				<div>Auto biggest ?</div><div> <p class="biggest">Nec piget dicere avide magis hanc</p> </div>
+				<div>Basic Link</div>
+				<div> <a href="http://batb.fr">BâtB.fr</a> </div>
 			</div>
 
 			<div class="guidlineObject">
-				<div>unordered lists</div><div> <ul><li>Nec piget dicere avide magis hanc insulam populum <br />aomanum invasisse quttam iuste.</li><li>Ptolomaeo enim rege foederato n proscribi ideoque. (14px)</li></ul> </div>
+				<div>disclaimer text</div>
+				<div>
+					<p class="tXSmall">Nec piget dicere avide magis hanc</p>
+				</div>
+			</div>
+
+			<div class="guidlineObject" title="Diminue ou augmente proportionnellement la taille (classe native knacss)">
+				<div>Auto smaller ?</div>
+				<div>
+					<p class="smaller">Nec piget dicere avide magis hanc</p>
+				</div>
+			</div>
+			<div class="guidlineObject" title="Diminue ou augmente proportionnellement la taille (classe native knacss)">
+				<div>Auto small ?</div>
+				<div>
+					<p class="small">Nec piget dicere avide magis hanc</p>
+				</div>
+			</div>
+			<div class="guidlineObject" title="Diminue ou augmente proportionnellement la taille (classe native knacss)">
+				<div>Auto big ?</div>
+				<div>
+					<p class="big">Nec piget dicere avide magis hanc</p>
+				</div>
+			</div>
+			<div class="guidlineObject" title="Diminue ou augmente proportionnellement la taille (classe native knacss)">
+				<div>Auto bigger ?</div>
+				<div>
+					<p class="bigger">Nec piget dicere avide magis hanc</p>
+				</div>
+			</div>
+			<div class="guidlineObject" title="Diminue ou augmente proportionnellement la taille (classe native knacss)">
+				<div>Auto biggest ?</div>
+				<div>
+					<p class="biggest">Nec piget dicere avide magis hanc</p>
+				</div>
+			</div>
+
+			<div class="guidlineObject">
+				<div>unordered lists</div>
+				<div>
+					<ul>
+						<li>Nec piget dicere avide magis hanc insulam populum <br />aomanum invasisse quttam iuste.</li>
+						<li>Ptolomaeo enim rege foederato n proscribi ideoque. (14px)</li>
+					</ul>
+				</div>
 			</div>
 
 			<div class="guidlineObject">
 				<div>inline icons ?? Demander a DAvid si l'inclusion est automatique ?? La couleur de l'icone est différente.</div>
-				<div> 
-					<p> <i class="fa fa-tag" aria-hidden="true"></i>  Nec piget dicere avide magis hanc insulam populum Romanum invasisse quam iuste. </p>
+				<div>
+					<p> <i class="fa fa-tag" aria-hidden="true"></i> Nec piget dicere avide magis hanc insulam populum Romanum invasisse quam
+						iuste. </p>
 					<p> Nec piget dicere avide magis hanc insulam populum Romanum invasisse quam iuste. <i class="fa fa-tag" aria-hidden="true"></i></p>
 				</div>
 			</div>
-		</section><!-- /#typography-othercopy-->
+		</section>
+		<!-- /#typography-othercopy-->
 
-	</section><!-- /#typography -->
-<hr />
+	</section>
+	<!-- /#typography -->
+	<hr />
 	<section id="uicolours">
 		<h2>UI Colours</h2>
 		<section id="">
 			<h3></h3>
 			<div class="guidlineObject">
-				<div>Type</div><div> 
+				<div>Type</div>
+				<div>
 					<div class="grid-5 has-gutter">
 						<div style="height:65px; background-color:#464646; line-height:65px; text-align:center; color:#fff; ">#464646</div>
 						<div style="height:65px; background-color:#f0f0f0; line-height:65px; text-align:center; color:#fff; ">#f0f0f0</div>
@@ -192,7 +292,8 @@ advectae sunt per Catonem, nunc repetetur ordo gestorum. (14px)</p></div>
 			</div>
 
 			<div class="guidlineObject">
-				<div>Badge color</div><div> 
+				<div>Badge color</div>
+				<div>
 					<div class="grid-6 has-gutter">
 						<div class="badge badge--1" style="height:65px; line-height:65px; border-radius:0; font-size:1.4rem;">#e31b15</div>
 						<div class="badge badge--2" style="height:65px; line-height:65px; border-radius:0; font-size:1.4rem;">#f0f0f0</div>
@@ -205,16 +306,19 @@ advectae sunt per Catonem, nunc repetetur ordo gestorum. (14px)</p></div>
 			</div>
 
 			<div class="guidlineObject">
-				<div>Gradiant</div><div> 
+				<div>Gradiant</div>
+				<div>
 					<div class="">
 						<div class="bloc-osef" style="height:65px; line-height:65px; border-radius:0; color:#fff; text-align:center;"> #f45558 — #a055f4 </div>
 					</div>
 				</div>
 			</div>
 
-		</section><!-- -->
-	</section><!-- /#uicolours -->
-<hr />
+		</section>
+		<!-- -->
+	</section>
+	<!-- /#uicolours -->
+	<hr />
 	<section id="components">
 		<h2>Components </h2>
 		<section id="components-mainlist">
@@ -227,21 +331,27 @@ advectae sunt per Catonem, nunc repetetur ordo gestorum. (14px)</p></div>
 							<div class="bList-number">#5</div>
 							<div>
 								<div class="bList-lineOne">
-									<span  class="bList-title"><span class="badge badge--1">Urgent</span> <b>Lorem :</b> Neque porro quisquam elorem ipsum.</span>
-								</div><!-- /.bList-lineOne -->
+									<span class="bList-title"><span class="badge badge--1">Urgent</span> <b>Lorem :</b> Neque porro quisquam elorem
+									ipsum.
+									</span>
+								</div>
+								<!-- /.bList-lineOne -->
 								<div class="bList-lineTwo">
 									<span class="bList-valeur"><b>Nouveau</b></span>
 									<span class="bList-valeur">Antoine Bordeau</span>
 									<span class="bList-valeur">PROJET : <a href="#projet">Elitis site auteur</a></span>
-								</div><!-- /.bList-lineTwo -->
+								</div>
+								<!-- /.bList-lineTwo -->
 							</div>
 							<div>
 								<a class="btn btn-ico btn-ico--small" href=""><i class="fa fa-long-arrow-right"></i></a>
 							</div>
 						</div>
-					</div><!-- /.bList -->
+					</div>
+					<!-- /.bList -->
 				</div>
-			</div><!-- .guidlineObject-->
+			</div>
+			<!-- .guidlineObject-->
 			<div class="guidlineObject">
 				<div>Hover</div>
 				<div>
@@ -250,21 +360,27 @@ advectae sunt per Catonem, nunc repetetur ordo gestorum. (14px)</p></div>
 							<div class="bList-number">#5</div>
 							<div>
 								<div class="bList-lineOne">
-									<span  class="bList-title"><span class="badge badge--1">Urgent</span> <b>Lorem :</b> Neque porro quisquam elorem ipsum.</span>
-								</div><!-- /.bList-lineOne -->
+									<span class="bList-title"><span class="badge badge--1">Urgent</span> <b>Lorem :</b> Neque porro quisquam elorem
+									ipsum.
+									</span>
+								</div>
+								<!-- /.bList-lineOne -->
 								<div class="bList-lineTwo">
 									<span class="bList-valeur"><b>Nouveau</b></span>
 									<span class="bList-valeur">Antoine Bordeau</span>
 									<span class="bList-valeur">PROJET : <a href="#projet">Elitis site auteur</a></span>
-								</div><!-- /.bList-lineTwo -->
+								</div>
+								<!-- /.bList-lineTwo -->
 							</div>
 							<div>
 								<a class="btn btn-ico btn-ico--small" href=""><i class="fa fa-long-arrow-right"></i></a>
 							</div>
 						</div>
-					</div><!-- /.bList -->
+					</div>
+					<!-- /.bList -->
 				</div>
-			</div><!-- .guidlineObject-->
+			</div>
+			<!-- .guidlineObject-->
 			<div class="guidlineObject">
 				<div>Current</div>
 				<div>
@@ -273,21 +389,27 @@ advectae sunt per Catonem, nunc repetetur ordo gestorum. (14px)</p></div>
 							<div class="bList-number">#5</div>
 							<div>
 								<div class="bList-lineOne">
-									<span  class="bList-title"><span class="badge badge--1">Urgent</span> <b>Lorem :</b> Neque porro quisquam elorem ipsum.</span>
-								</div><!-- /.bList-lineOne -->
+									<span class="bList-title"><span class="badge badge--1">Urgent</span> <b>Lorem :</b> Neque porro quisquam elorem
+									ipsum.
+									</span>
+								</div>
+								<!-- /.bList-lineOne -->
 								<div class="bList-lineTwo">
 									<span class="bList-valeur"><b>Nouveau</b></span>
 									<span class="bList-valeur">Antoine Bordeau</span>
 									<span class="bList-valeur">PROJET : <a href="#projet">Elitis site auteur</a></span>
-								</div><!-- /.bList-lineTwo -->
+								</div>
+								<!-- /.bList-lineTwo -->
 							</div>
 							<div>
 								<a class="btn btn-ico btn-ico--small" href=""><i class="fa fa-long-arrow-right"></i></a>
 							</div>
 						</div>
-					</div><!-- /.bList -->
+					</div>
+					<!-- /.bList -->
 				</div>
-			</div><!-- .guidlineObject-->
+			</div>
+			<!-- .guidlineObject-->
 			<div class="guidlineObject">
 				<div>Regular without tag</div>
 				<div>
@@ -296,22 +418,27 @@ advectae sunt per Catonem, nunc repetetur ordo gestorum. (14px)</p></div>
 							<div class="bList-number">#5</div>
 							<div>
 								<div class="bList-lineOne">
-									<span  class="bList-title"><b>Lorem :</b> Neque porro quisquam elorem ipsum.</span>
-								</div><!-- /.bList-lineOne -->
+									<span class="bList-title"><b>Lorem :</b> Neque porro quisquam elorem ipsum.</span>
+								</div>
+								<!-- /.bList-lineOne -->
 								<div class="bList-lineTwo">
 									<span class="bList-valeur"><b>Nouveau</b></span>
 									<span class="bList-valeur">Antoine Bordeau</span>
 									<span class="bList-valeur">PROJET : <a href="#projet">Elitis site auteur</a></span>
-								</div><!-- /.bList-lineTwo -->
+								</div>
+								<!-- /.bList-lineTwo -->
 							</div>
 							<div>
 								<a class="btn btn-ico btn-ico--small" href=""><i class="fa fa-long-arrow-right"></i></a>
 							</div>
 						</div>
-					</div><!-- /.bList -->
+					</div>
+					<!-- /.bList -->
 				</div>
-			</div><!-- .guidlineObject-->
-		</section><!-- /#components-mainlist-->
+			</div>
+			<!-- .guidlineObject-->
+		</section>
+		<!-- /#components-mainlist-->
 
 		<section id="components-simplelist">
 			<h3>Simple list</h3>
@@ -322,19 +449,23 @@ advectae sunt per Catonem, nunc repetetur ordo gestorum. (14px)</p></div>
 						<div class="flex-container">
 							<div>
 								<div class="bList-lineOne">
-									<span  class="bList-title">Antoine <b>Bordeau</b></span>
-								</div><!-- /.bList-lineOne -->
+									<span class="bList-title">Antoine <b>Bordeau</b></span>
+								</div>
+								<!-- /.bList-lineOne -->
 								<div class="bList-lineTwo">
 									<span class="bList-valeur">antoinebordeau@exemple.org</span>
-								</div><!-- /.bList-lineTwo -->
+								</div>
+								<!-- /.bList-lineTwo -->
 							</div>
 							<div>
 								<a class="btn btn-ico btn-ico--small" href=""><i class="fa fa-long-arrow-right"></i></a>
 							</div>
 						</div>
-					</div><!-- /.bList -->
+					</div>
+					<!-- /.bList -->
 				</div>
-			</div><!-- .guidlineObject-->
+			</div>
+			<!-- .guidlineObject-->
 			<div class="guidlineObject">
 				<div>Hover</div>
 				<div>
@@ -342,19 +473,23 @@ advectae sunt per Catonem, nunc repetetur ordo gestorum. (14px)</p></div>
 						<div class="flex-container">
 							<div>
 								<div class="bList-lineOne">
-									<span  class="bList-title">Antoine <b>Griezmann</b></span>
-								</div><!-- /.bList-lineOne -->
+									<span class="bList-title">Antoine <b>Griezmann</b></span>
+								</div>
+								<!-- /.bList-lineOne -->
 								<div class="bList-lineTwo">
 									<span class="bList-valeur">antoinegriezmann@exemple.org</span>
-								</div><!-- /.bList-lineTwo -->
+								</div>
+								<!-- /.bList-lineTwo -->
 							</div>
 							<div>
 								<a class="btn btn-ico btn-ico--small" href=""><i class="fa fa-long-arrow-right"></i></a>
 							</div>
 						</div>
-					</div><!-- /.bList -->
+					</div>
+					<!-- /.bList -->
 				</div>
-			</div><!-- .guidlineObject-->
+			</div>
+			<!-- .guidlineObject-->
 			<div class="guidlineObject">
 				<div>Current</div>
 				<div>
@@ -362,29 +497,38 @@ advectae sunt per Catonem, nunc repetetur ordo gestorum. (14px)</p></div>
 						<div class="flex-container">
 							<div>
 								<div class="bList-lineOne">
-									<span  class="bList-title">Antoine <b>Daniel</b></span>
-								</div><!-- /.bList-lineOne -->
+									<span class="bList-title">Antoine <b>Daniel</b></span>
+								</div>
+								<!-- /.bList-lineOne -->
 								<div class="bList-lineTwo">
 									<span class="bList-valeur">antoinedaniel@exemple.org</span>
-								</div><!-- /.bList-lineTwo -->
+								</div>
+								<!-- /.bList-lineTwo -->
 							</div>
 							<div>
 								<a class="btn btn-ico btn-ico--small" href=""><i class="fa fa-long-arrow-right"></i></a>
 							</div>
 						</div>
-					</div><!-- /.bList -->
+					</div>
+					<!-- /.bList -->
 				</div>
-			</div><!-- .guidlineObject-->
-		</section><!-- /#components-simplelist-->
+			</div>
+			<!-- .guidlineObject-->
+		</section>
+		<!-- /#components-simplelist-->
 
 		<section id="components-timeline">
 			<h3>Timeline</h3>
 			<div class="guidlineObject">
 				<div>Main date</div>
 				<div>
-					<div class="title1"><div>Aujourd’hui</div><div></div></div>
+					<div class="title1">
+						<div>Aujourd’hui</div>
+						<div></div>
+					</div>
 				</div>
-			</div><!-- .guidlineObject-->
+			</div>
+			<!-- .guidlineObject-->
 			<div class="guidlineObject">
 				<div>Event</div>
 				<div>
@@ -405,7 +549,8 @@ advectae sunt per Catonem, nunc repetetur ordo gestorum. (14px)</p></div>
 						</div>
 					</div>
 				</div>
-			</div><!-- .guidlineObject-->
+			</div>
+			<!-- .guidlineObject-->
 			<div class="guidlineObject">
 				<div>Event Rollover</div>
 				<div>
@@ -426,8 +571,10 @@ advectae sunt per Catonem, nunc repetetur ordo gestorum. (14px)</p></div>
 						</div>
 					</div>
 				</div>
-			</div><!-- .guidlineObject-->
-		</section><!-- /#components-timeline-->
+			</div>
+			<!-- .guidlineObject-->
+		</section>
+		<!-- /#components-timeline-->
 
 		<section id="components-notifications">
 			<h3>Notifications</h3>
@@ -439,7 +586,8 @@ advectae sunt per Catonem, nunc repetetur ordo gestorum. (14px)</p></div>
 						<div><a href="#" class="btn btn-ico btn-ico--small close"><i class="fa fa-close"></i></a></div>
 					</div>
 				</div>
-			</div><!-- .guidlineObject-->
+			</div>
+			<!-- .guidlineObject-->
 			<div class="guidlineObject">
 				<div>Error</div>
 				<div>
@@ -448,7 +596,8 @@ advectae sunt per Catonem, nunc repetetur ordo gestorum. (14px)</p></div>
 						<div><a href="#" class="btn btn-ico btn-ico--small close"><i class="fa fa-close"></i></a></div>
 					</div>
 				</div>
-			</div><!-- .guidlineObject-->
+			</div>
+			<!-- .guidlineObject-->
 			<div class="guidlineObject">
 				<div>Carreful</div>
 				<div>
@@ -457,7 +606,8 @@ advectae sunt per Catonem, nunc repetetur ordo gestorum. (14px)</p></div>
 						<div><a href="#" class="btn btn-ico btn-ico--small close"><i class="fa fa-close"></i></a></div>
 					</div>
 				</div>
-			</div><!-- .guidlineObject-->
+			</div>
+			<!-- .guidlineObject-->
 			<div class="guidlineObject">
 				<div>Information</div>
 				<div>
@@ -466,38 +616,47 @@ advectae sunt per Catonem, nunc repetetur ordo gestorum. (14px)</p></div>
 						<div><a href="#" class="btn btn-ico btn-ico--small close"><i class="fa fa-close"></i></a></div>
 					</div>
 				</div>
-			</div><!-- .guidlineObject-->
+			</div>
+			<!-- .guidlineObject-->
 
-		</section><!-- /#components-notifications-->
+		</section>
+		<!-- /#components-notifications-->
 
 		<section id="components-badgets">
 			<h3>Tags</h3>
 			<div class="guidlineObject">
 				<div>Urgent</div>
 				<div> <span class="badge badge--1">Urgent</span> </div>
-			</div><!-- .guidlineObject-->
+			</div>
+			<!-- .guidlineObject-->
 
 			<div class="guidlineObject">
 				<div>Elevé</div>
 				<div> <span class="badge badge--2">Elevé</span> </div>
-			</div><!-- .guidlineObject-->
+			</div>
+			<!-- .guidlineObject-->
 			<div class="guidlineObject">
 				<div>Faible</div>
 				<div> <span class="badge badge--3">Faible</span> </div>
-			</div><!-- .guidlineObject-->
+			</div>
+			<!-- .guidlineObject-->
 			<div class="guidlineObject">
 				<div>Actif</div>
 				<div> <span class="badge badge--4">Actif</span> </div>
-			</div><!-- .guidlineObject-->
+			</div>
+			<!-- .guidlineObject-->
 			<div class="guidlineObject">
 				<div>Inactif</div>
 				<div> <span class="badge badge--5">Inactif</span> </div>
-			</div><!-- .guidlineObject-->
+			</div>
+			<!-- .guidlineObject-->
 			<div class="guidlineObject">
 				<div>Jeton(s)</div>
 				<div> <span class="badge badge--6">25 jetons</span> </div>
-			</div><!-- .guidlineObject-->
-		</section><!-- /#components-badgets-->
+			</div>
+			<!-- .guidlineObject-->
+		</section>
+		<!-- /#components-badgets-->
 
 		<section id="components-avatars">
 			<h3>Avatars</h3>
@@ -506,28 +665,31 @@ advectae sunt per Catonem, nunc repetetur ordo gestorum. (14px)</p></div>
 				<div class="grid-4 has-gutter-l">
 					<div>
 						<div class="avatar">
-							<img src="http://lorempixel.com/38/38/animals/" alt="?" width="68" height="68"/>
+							<img src="http://lorempixel.com/38/38/animals/" alt="?" width="68" height="68" />
 							<span class="badge badge--ico badge--4"><i class="fa fa-shield"></i></span>
 						</div>
 					</div>
 					<div>
 						<div class="avatar avatar--small">
-							<img src="http://lorempixel.com/38/38/animals/" alt="?" width="40" height="40"/>
+							<img src="http://lorempixel.com/38/38/animals/" alt="?" width="40" height="40" />
 							<span class="badge badge--ico badge--6"><i class="fa fa-star"></i></span>
 						</div>
 					</div>
 				</div>
-			</div><!-- .guidlineObject-->
+			</div>
+			<!-- .guidlineObject-->
 			<div class="guidlineObject">
 				<div>Avatar</div>
 				<div class="grid-4 has-gutter-l">
-					<div class="avatar"><img src="http://lorempixel.com/38/38/animals/" alt="?" width="68" height="68"/></div>
-					<div class="avatar avatar--small"><img src="http://lorempixel.com/38/38/animals/" alt="?" width="38" height="38"/></div>
+					<div class="avatar"><img src="http://lorempixel.com/38/38/animals/" alt="?" width="68" height="68" /></div>
+					<div class="avatar avatar--small"><img src="http://lorempixel.com/38/38/animals/" alt="?" width="38" height="38" /></div>
 				</div>
-			</div><!-- .guidlineObject-->
+			</div>
+			<!-- .guidlineObject-->
 
 
-		</section><!-- /#components-avatars-->
+		</section>
+		<!-- /#components-avatars-->
 
 
 		<section id="components-comments">
@@ -537,45 +699,49 @@ advectae sunt per Catonem, nunc repetetur ordo gestorum. (14px)</p></div>
 				<div>
 					<div class="bComments">
 						<div>
-							<img src="http://lorempixel.com/38/38/animals/" alt="?" width="38" height="38"/>
+							<img src="http://lorempixel.com/38/38/animals/" alt="?" width="38" height="38" />
 						</div>
 						<div>
 							<div>
 								<span class="bComments-valeur">Louis Duphil</span>
 								<span class="bComments-valeur">25/05/2016 - 09:27</span>
 							</div>
-							<p class="bComments-message">Pnc mauris enim, sollicitudin sed gravida ac, feugiat quis ipsum. Morbi lacinia sapien quis dui <a href="http://batb.fr">batb.fr</a>, sit amet sodales magna sollicitudin. </p>
+							<p class="bComments-message">Pnc mauris enim, sollicitudin sed gravida ac, feugiat quis ipsum. Morbi lacinia sapien quis dui <a href="http://batb.fr">batb.fr</a>,
+								sit amet sodales magna sollicitudin. </p>
 						</div>
 					</div>
 				</div>
-			</div><!-- .guidlineObject-->
+			</div>
+			<!-- .guidlineObject-->
 
 			<div class="guidlineObject">
 				<div>Multi comments</div>
 				<div>
 					<div class="bComments">
 						<div>
-							<img src="http://lorempixel.com/38/38/animals/" alt="?" width="38" height="38"/>
+							<img src="http://lorempixel.com/38/38/animals/" alt="?" width="38" height="38" />
 						</div>
 						<div>
 							<div>
 								<span class="bComments-valeur">Louis Duphil</span>
 								<span class="bComments-valeur">25/05/2016 - 09:27</span>
 							</div>
-							<p class="bComments-message">Pnc mauris enim, sollicitudin sed gravida ac, feugiat quis ipsum. Morbi lacinia sapien quis dui <a href="http://batb.fr">batb.fr</a>, sit amet sodales magna sollicitudin. </p>
+							<p class="bComments-message">Pnc mauris enim, sollicitudin sed gravida ac, feugiat quis ipsum. Morbi lacinia sapien quis dui <a href="http://batb.fr">batb.fr</a>,
+								sit amet sodales magna sollicitudin. </p>
 						</div>
 					</div>
 
 					<div class="bComments">
 						<div>
-							<img src="http://lorempixel.com/38/38/animals/" alt="?" width="38" height="38"/>
+							<img src="http://lorempixel.com/38/38/animals/" alt="?" width="38" height="38" />
 						</div>
 						<div>
 							<div>
 								<span class="bComments-valeur">Louis Duphil</span>
 								<span class="bComments-valeur">25/05/2016 - 09:27</span>
 							</div>
-							<p class="bComments-message">Pnc mauris enim, sollicitudin sed gravida ac, feugiat quis ipsum. Morbi lacinia sapien quis dui <a href="http://batb.fr">batb.fr</a>, sit amet sodales magna sollicitudin. </p>
+							<p class="bComments-message">Pnc mauris enim, sollicitudin sed gravida ac, feugiat quis ipsum. Morbi lacinia sapien quis dui <a href="http://batb.fr">batb.fr</a>,
+								sit amet sodales magna sollicitudin. </p>
 							<div class="bComments-pj">
 								<span>PIECE JOINTE :</span>
 								<a target="_blank" href="#pj">ZERTJYTHDGS.jpg</a>
@@ -584,15 +750,18 @@ advectae sunt per Catonem, nunc repetetur ordo gestorum. (14px)</p></div>
 						</div>
 					</div>
 				</div>
-			</div><!-- .guidlineObject-->
+			</div>
+			<!-- .guidlineObject-->
 
 
-		</section><!-- /#components-comments-->
+		</section>
+		<!-- /#components-comments-->
 
-	</section><!-- /#components -->
+	</section>
+	<!-- /#components -->
 
 
-<hr />
+	<hr />
 	<section id="buttonlinks">
 		<h2>Buttons & Links </h2>
 		<section id="buttonlinks-standard">
@@ -607,7 +776,8 @@ advectae sunt per Catonem, nunc repetetur ordo gestorum. (14px)</p></div>
 						<a class="btn btn-standard btn-standard--invert" href="">Lorem ipsum</a>
 					</div>
 				</div>
-			</div><!-- .guidlineObject-->
+			</div>
+			<!-- .guidlineObject-->
 			<div class="guidlineObject">
 				<div>Regular Hover</div>
 				<div class="grid-3 has-gutter">
@@ -618,8 +788,10 @@ advectae sunt per Catonem, nunc repetetur ordo gestorum. (14px)</p></div>
 						<a class="btn btn-standard btn-standard--invert hover" href="">Lorem ipsum</a>
 					</div>
 				</div>
-			</div><!-- .guidlineObject-->
-		</section><!-- /#buttonlinks-standard-->
+			</div>
+			<!-- .guidlineObject-->
+		</section>
+		<!-- /#buttonlinks-standard-->
 
 		<section id="buttonlinks-standard--ico">
 			<h3>Standard Button + Ico</h3>
@@ -629,28 +801,38 @@ advectae sunt per Catonem, nunc repetetur ordo gestorum. (14px)</p></div>
 					<a class="btn btn-standard" href=""><i class="fa fa-bars"></i>Lorem ipsum</a>
 					<a class="btn btn-standard btn-standard--icoRight" href="">Lorem ipsum<i class="fa fa-bars"></i></a>
 				</div>
-			</div><!-- .guidlineObject-->
+			</div>
+			<!-- .guidlineObject-->
 			<div class="guidlineObject">
 				<div>Regular hover</div>
 				<div>
 					<a class="btn btn-standard hover" href=""><i class="fa fa-bars"></i>Lorem ipsum</a>
 					<a class="btn btn-standard btn-standard--icoRight hover" href="">Lorem ipsum<i class="fa fa-bars"></i></a>
 				</div>
-			</div><!-- .guidlineObject-->
-		</section><!-- /#buttonlinks-standard--ico-->
+			</div>
+			<!-- .guidlineObject-->
+		</section>
+		<!-- /#buttonlinks-standard--ico-->
 
 		<section id="buttonlinks-validation">
 			<h3>Validation</h3>
 			<div class="guidlineObject">
-				<div>Inactif</div><div> <button class="btn btn-submit" type="submit" disabled="disabled">Valider</button> </div>
-			</div><!-- .guidlineObject-->
+				<div>Inactif</div>
+				<div> <button class="btn btn-submit" type="submit" disabled="disabled">Valider</button> </div>
+			</div>
+			<!-- .guidlineObject-->
 			<div class="guidlineObject">
-				<div>Actif</div><div> <button class="btn btn-submit" type="submit">Valider</button> </div>
-			</div><!-- .guidlineObject-->
+				<div>Actif</div>
+				<div> <button class="btn btn-submit" type="submit">Valider</button> </div>
+			</div>
+			<!-- .guidlineObject-->
 			<div class="guidlineObject">
-				<div>Hover</div><div> <button class="btn btn-submit hover" type="submit">Valider</button> </div>
-			</div><!-- .guidlineObject-->
-		</section><!-- /#buttonlinks-validation-->
+				<div>Hover</div>
+				<div> <button class="btn btn-submit hover" type="submit">Valider</button> </div>
+			</div>
+			<!-- .guidlineObject-->
+		</section>
+		<!-- /#buttonlinks-validation-->
 
 		<section id="buttonlinks-circleico">
 			<h3>Circle + Ico</h3>
@@ -660,22 +842,26 @@ advectae sunt per Catonem, nunc repetetur ordo gestorum. (14px)</p></div>
 					<a class="btn btn-ico" href=""><i class="fa fa-pencil"></i></a>
 					<a class="btn btn-ico btn-ico--small" href=""><i class="fa fa-pencil"></i></a>
 				</div>
-			</div><!-- .guidlineObject-->
+			</div>
+			<!-- .guidlineObject-->
 			<div class="guidlineObject">
 				<div>Hover</div>
 				<div>
 					<a class="btn btn-ico hover" href=""><i class="fa fa-pencil"></i></a>
 					<a class="btn btn-ico btn-ico--small hover" href=""><i class="fa fa-pencil"></i></a>
 				</div>
-			</div><!-- .guidlineObject-->
+			</div>
+			<!-- .guidlineObject-->
 			<div class="guidlineObject">
 				<div>Actif</div>
 				<div>
 					<a class="btn btn-ico active" href=""><i class="fa fa-pencil"></i></a>
 					<a class="btn btn-ico btn-ico--small active" href=""><i class="fa fa-pencil"></i></a>
 				</div>
-			</div><!-- .guidlineObject-->
-		</section><!-- /#buttonlinks-circleico-->
+			</div>
+			<!-- .guidlineObject-->
+		</section>
+		<!-- /#buttonlinks-circleico-->
 
 		<section id="buttonlinks-linksfat">
 			<h3>Links fat</h3>
@@ -691,9 +877,11 @@ advectae sunt per Catonem, nunc repetetur ordo gestorum. (14px)</p></div>
 								<span class="btn btn-ico btn-ico--small"><i class="fa fa-plus"></i></span>
 							</div>
 						</div>
-					</a><!-- /.bList -->
+					</a>
+					<!-- /.bList -->
 				</div>
-			</div><!-- .guidlineObject-->
+			</div>
+			<!-- .guidlineObject-->
 			<div class="guidlineObject">
 				<div>Hover</div>
 				<div>
@@ -706,9 +894,11 @@ advectae sunt per Catonem, nunc repetetur ordo gestorum. (14px)</p></div>
 								<span class="btn btn-ico btn-ico--small"><i class="fa fa-plus"></i></span>
 							</div>
 						</div>
-					</a><!-- /.bList -->
+					</a>
+					<!-- /.bList -->
 				</div>
-			</div><!-- .guidlineObject-->
+			</div>
+			<!-- .guidlineObject-->
 
 			<div class="guidlineObject">
 				<div>Active</div>
@@ -722,42 +912,56 @@ advectae sunt per Catonem, nunc repetetur ordo gestorum. (14px)</p></div>
 								<span class="btn btn-ico btn-ico--small"><i class="fa fa-plus"></i></span>
 							</div>
 						</div>
-					</a><!-- /.bList -->
+					</a>
+					<!-- /.bList -->
 				</div>
-			</div><!-- .guidlineObject-->
+			</div>
+			<!-- .guidlineObject-->
 
-		</section><!-- /#buttonlinks-linksfat-->
+		</section>
+		<!-- /#buttonlinks-linksfat-->
 
-	</section><!-- /#buttonlinks -->
+	</section>
+	<!-- /#buttonlinks -->
 
-<hr />
+	<hr />
 	<section id="formelements">
 		<h2>Form elements</h2>
 		<section id="formelements-titleinput">
 			<h3>Title Input</h3>
 			<div class="guidlineObject">
-				<div>Empty</div><div> <form><input class="title" type="text" value="" placeholder="Sujet du ticket" /></form> </div>
-			</div><!-- .guidlineObject-->
+				<div>Empty</div>
+				<div>
+					<form><input class="title" type="text" value="" placeholder="Sujet du ticket" /></form>
+				</div>
+			</div>
+			<!-- .guidlineObject-->
 			<div class="guidlineObject">
-				<div>Filled</div><div> <form><input class="title focus" type="text" value="Lorem impsum" placeholder="Sujet du ticket" /></form> </div>
-			</div><!-- .guidlineObject-->
+				<div>Filled</div>
+				<div>
+					<form><input class="title focus" type="text" value="Lorem impsum" placeholder="Sujet du ticket" /></form>
+				</div>
+			</div>
+			<!-- .guidlineObject-->
 
-		</section><!-- /#formelements-titleinput-->
+		</section>
+		<!-- /#formelements-titleinput-->
 
 		<section id="formelements-classicinput">
 			<h3>Classic Input</h3>
 			<div class="guidlineObject">
 				<div>Empty</div>
-				<div> 
+				<div>
 					<form>
 						<p><label for="idinput1">Label</label></p>
 						<p><input id="idinput1" class="" type="text" value="" placeholder="" /></p>
 					</form>
 				</div>
-			</div><!-- .guidlineObject-->
+			</div>
+			<!-- .guidlineObject-->
 			<div class="guidlineObject">
 				<div>Filled</div>
-				<div> 
+				<div>
 					<form>
 						<p><label for="idinput2">Label<focus/label></p>
 						<p><input id="idinput2" class="focus" type="text" value="Description de votre ticket" placeholder="" /></p>
@@ -792,23 +996,26 @@ advectae sunt per Catonem, nunc repetetur ordo gestorum. (14px)</p></div>
 						<p><textarea id="idinput4"></textarea></p>
 					</form>
 				</div>
-			</div><!-- .guidlineObject-->
+			</div>
+			<!-- .guidlineObject-->
 			<div class="guidlineObject">
 				<div>Filled</div>
-				<div> 
+				<div>
 					<form>
 						<p><label for="idinput5">Label</label></p>
 						<p><textarea id="idinput5">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam optio aliquid similique porro autem in facere voluptates suscipit dolorem beatae nostrum minima nihil, dolore quasi dolor officiis possimus ipsum atque, quia vitae deleniti temporibus neque harum quisquam. Totam aliquam possimus mollitia dignissimos sit, reiciendis quo ratione laborum, dolore cum quibusdam doloribus expedita numquam eum commodi aut culpa consequatur odit vero praesentium, tempore id earum, ad provident consectetur. Sed ratione animi veniam, architecto quaerat, perferendis, autem, natus voluptatum ex libero reiciendis dolor. Quasi quaerat rerum iste architecto modi quae, facere at.</textarea></p>
 					</form>
 				</div>
-			</div><!-- .guidlineObject-->
-		</section><!-- /#formelements-textarea-->
+			</div>
+			<!-- .guidlineObject-->
+		</section>
+		<!-- /#formelements-textarea-->
 
 		<section id="formelements-dropdown">
 			<h3>Dropdown</h3>
 			<div class="guidlineObject">
 				<div>Select field</div>
-				<div> 
+				<div>
 					<form>
 						<p><label for="idinput6">Label</label></p>
 						<p><select id="idinput6" class="formSelect">
@@ -820,14 +1027,16 @@ advectae sunt per Catonem, nunc repetetur ordo gestorum. (14px)</p></div>
 						</select></p>
 					</form>
 				</div>
-			</div><!-- .guidlineObject-->
-		</section><!-- /#formelements-dropdown-->
+			</div>
+			<!-- .guidlineObject-->
+		</section>
+		<!-- /#formelements-dropdown-->
 
 		<section id="formelements-radio">
 			<h3>Case à cocher</h3>
 			<div class="guidlineObject">
 				<div>Input radio</div>
-				<div> 
+				<div>
 					<form>
 						<p class="formCase">
 							<input id="radioSAV1" type="radio" name="SAV" value="1">
@@ -839,14 +1048,16 @@ advectae sunt per Catonem, nunc repetetur ordo gestorum. (14px)</p></div>
 						</p>
 					</form>
 				</div>
-			</div><!-- .guidlineObject-->
-		</section><!-- /#formelements-radio-->
+			</div>
+			<!-- .guidlineObject-->
+		</section>
+		<!-- /#formelements-radio-->
 
 		<section id="formelements-checkbox">
 			<h3>Case à cocher</h3>
 			<div class="guidlineObject">
 				<div>Input checkbox</div>
-				<div> 
+				<div>
 					<form>
 						<p class="formCase">
 							<input id="checkboxSAV1" type="checkbox" name="SAV" value="1">
@@ -858,10 +1069,13 @@ advectae sunt per Catonem, nunc repetetur ordo gestorum. (14px)</p></div>
 						</p>
 					</form>
 				</div>
-			</div><!-- .guidlineObject-->
-		</section><!-- /#formelements-checkbox-->
+			</div>
+			<!-- .guidlineObject-->
+		</section>
+		<!-- /#formelements-checkbox-->
 
-	</section><!-- /#formelements -->
+	</section>
+	<!-- /#formelements -->
 
 	<hr />
 	<section id="cards">
@@ -880,7 +1094,13 @@ advectae sunt per Catonem, nunc repetetur ordo gestorum. (14px)</p></div>
 							<button class="modal-close-inner btn btn-ico btn-ico--small"><i class="fa fa-times" aria-hidden="true"></i></button>
 						</header>
 						<main>
-							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ullam libero in consectetur vel eius inventore totam similique, harum rerum odit qui commodi, obcaecati eum unde quaerat perferendis ad sequi dolorem temporibus iure. Fuga quod rem impedit vero possimus saepe hic, enim totam doloremque eveniet facere, porro cumque, minus nam! Voluptas sint aut voluptatem voluptates et, aliquid distinctio nostrum totam, possimus ut, eveniet optio dolor pariatur iusto minima corporis! Quaerat sed quidem illum accusantium hic obcant, quia dolorum debitis culpa. Commodi enim, voluptatibus. Numquam quis recusandae, natus ad, voluptatum excepturi amet hic sunt non aperiam fugiat provident cupiditate illo aliquam in.</p>
+							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ullam libero in consectetur vel eius inventore totam similique,
+								harum rerum odit qui commodi, obcaecati eum unde quaerat perferendis ad sequi dolorem temporibus iure. Fuga quod
+								rem impedit vero possimus saepe hic, enim totam doloremque eveniet facere, porro cumque, minus nam! Voluptas sint
+								aut voluptatem voluptates et, aliquid distinctio nostrum totam, possimus ut, eveniet optio dolor pariatur iusto minima
+								corporis! Quaerat sed quidem illum accusantium hic obcant, quia dolorum debitis culpa. Commodi enim, voluptatibus.
+								Numquam quis recusandae, natus ad, voluptatum excepturi amet hic sunt non aperiam fugiat provident cupiditate illo
+								aliquam in.</p>
 						</main>
 						<footer>
 							<div class="grid has-gutter">
@@ -889,8 +1109,10 @@ advectae sunt per Catonem, nunc repetetur ordo gestorum. (14px)</p></div>
 						</footer>
 					</div>
 					<button class="modal-close"></button>
-				</div><!-- /.modal -->
-			</div><!-- .guidlineObject-->
+				</div>
+				<!-- /.modal -->
+			</div>
+			<!-- .guidlineObject-->
 
 			<div class="guidlineObject">
 				<div>Modal small</div>
@@ -904,7 +1126,13 @@ advectae sunt per Catonem, nunc repetetur ordo gestorum. (14px)</p></div>
 							<button class="modal-close-inner btn btn-ico btn-ico--small"><i class="fa fa-times" aria-hidden="true"></i></button>
 						</header>
 						<main>
-							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ullam libero in consectetur vel eius inventore totam similique, harum rerum odit qui commodi, obcaecati eum unde quaerat perferendis ad sequi dolorem temporibus iure. Fuga quod rem impedit vero possimus saepe hic, enim totam doloremque eveniet facere, porro cumque, minus nam! Voluptas sint aut voluptatem voluptates et, aliquid distinctio nostrum totam, possimus ut, eveniet optio dolor pariatur iusto minima corporis! Quaerat sed quidem illum accusantium hic obcant, quia dolorum debitis culpa. Commodi enim, voluptatibus. Numquam quis recusandae, natus ad, voluptatum excepturi amet hic sunt non aperiam fugiat provident cupiditate illo aliquam in.</p>
+							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ullam libero in consectetur vel eius inventore totam similique,
+								harum rerum odit qui commodi, obcaecati eum unde quaerat perferendis ad sequi dolorem temporibus iure. Fuga quod
+								rem impedit vero possimus saepe hic, enim totam doloremque eveniet facere, porro cumque, minus nam! Voluptas sint
+								aut voluptatem voluptates et, aliquid distinctio nostrum totam, possimus ut, eveniet optio dolor pariatur iusto minima
+								corporis! Quaerat sed quidem illum accusantium hic obcant, quia dolorum debitis culpa. Commodi enim, voluptatibus.
+								Numquam quis recusandae, natus ad, voluptatum excepturi amet hic sunt non aperiam fugiat provident cupiditate illo
+								aliquam in.</p>
 						</main>
 						<footer>
 							<div class="grid has-gutter">
@@ -913,11 +1141,15 @@ advectae sunt per Catonem, nunc repetetur ordo gestorum. (14px)</p></div>
 						</footer>
 					</div>
 					<button class="modal-close"></button>
-				</div><!-- /.modal -->
-			</div><!-- .guidlineObject-->
-		</section><!-- /#cards-modal-->
+				</div>
+				<!-- /.modal -->
+			</div>
+			<!-- .guidlineObject-->
+		</section>
+		<!-- /#cards-modal-->
 
-	</section><!-- /#cards -->
+	</section>
+	<!-- /#cards -->
 
 	<hr />
 	<section id="navigations">
@@ -937,8 +1169,10 @@ advectae sunt per Catonem, nunc repetetur ordo gestorum. (14px)</p></div>
 						</ul>
 					</nav>
 				</div>
-			</div><!-- .guidlineObject-->
-		</section><!-- /#navigations-menu-->
+			</div>
+			<!-- .guidlineObject-->
+		</section>
+		<!-- /#navigations-menu-->
 		<section id="navigations-menu">
 			<h3>Pagination</h3>
 			<div class="guidlineObject">
@@ -954,29 +1188,43 @@ advectae sunt per Catonem, nunc repetetur ordo gestorum. (14px)</p></div>
 						<a class="btn btn-ico btn-ico--small" href="#"><i class="fa fa-chevron-right"></i></a>
 					</nav>
 				</div>
-			</div><!-- .guidlineObject-->
-		</section><!-- /#navigations-menu-->
+			</div>
+			<!-- .guidlineObject-->
+		</section>
+		<!-- /#navigations-menu-->
 
-	</section><!-- /#cards -->
+	</section>
+	<!-- /#cards -->
 
-<hr />
+	<hr />
 	<section id="xxxxx">
 		<h2></h2>
 		<section id="xxxxx-bla1">
 			<h3></h3>
 			<div class="guidlineObject">
-				<div></div><div> <p></p> </div>
-			</div><!-- .guidlineObject-->
-		</section><!-- /#xxxxx-bla1-->
+				<div></div>
+				<div>
+					<p></p>
+				</div>
+			</div>
+			<!-- .guidlineObject-->
+		</section>
+		<!-- /#xxxxx-bla1-->
 
 		<section id="xxxxx-bla2">
 			<h3></h3>
 			<div class="guidlineObject">
-				<div></div><div> <p></p> </div>
-			</div><!-- .guidlineObject-->
-		</section><!-- /#xxxxx-bla2-->
+				<div></div>
+				<div>
+					<p></p>
+				</div>
+			</div>
+			<!-- .guidlineObject-->
+		</section>
+		<!-- /#xxxxx-bla2-->
 
-	</section><!-- /#xxxxx -->
+	</section>
+	<!-- /#xxxxx -->
 
 
 
@@ -987,24 +1235,31 @@ advectae sunt per Catonem, nunc repetetur ordo gestorum. (14px)</p></div>
 			<div class="guidlineObject">
 				<div>Basé sur Knacss</div>
 				<div><a href="https://github.com/alsacreations/KNACSS/tree/master/doc">https://github.com/alsacreations/KNACSS/tree/master/doc</a></div>
-			</div><!-- .guidlineObject-->
+			</div>
+			<!-- .guidlineObject-->
 			<div class="guidlineObject">
 				<div>Styleguide Knacss</div>
 				<div><a href="http://codepen.io/raphaelgoetter/full/LNwOjz/">http://codepen.io/raphaelgoetter/full/LNwOjz/</a></div>
-			</div><!-- .guidlineObject-->
+			</div>
+			<!-- .guidlineObject-->
 			<div class="guidlineObject">
 				<div>Font awesome</div>
 				<div><a href="http://fontawesome.io/">http://fontawesome.io/</a></div>
-			</div><!-- .guidlineObject-->
+			</div>
+			<!-- .guidlineObject-->
 			<div class="guidlineObject">
 				<div>Bulma</div>
 				<div><a href="http://bulma.io">http://bulma.io</a></div>
-			</div><!-- .guidlineObject-->
+			</div>
+			<!-- .guidlineObject-->
 
-		</section><!-- /#sources-liens-->
-	</section><!-- /#xxxxx -->
+		</section>
+		<!-- /#sources-liens-->
+	</section>
+	<!-- /#xxxxx -->
 
 
-<script type="text/javascript" src="./dist/js/app.js"></script>
+	<script type="text/javascript" src="./dist/js/app.js"></script>
 </body>
+
 </html>
