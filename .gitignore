@@ -7,8 +7,6 @@
 .settings
 .tmproj
 *.esproj
-*.sublime-project
-*.sublime-workspace
 nbproject
 Thumbs.db
 .vscode
@@ -37,9 +35,6 @@ venv
 *.sublime-workspace
 # project files should be checked into the repository, unless a significant proportion of contributors will probably not be using SublimeText
 *.sublime-project
-
-#Mac 
-.DS_Store
 
 #Dossiers voués à dispâraitre
 app/assets/js-old
