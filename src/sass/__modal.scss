@@ -25,8 +25,8 @@
 	position: absolute;
 	right: 0;
 	top: 0;
-	background-color: rgba($color6, 0.86);
-	//@include gradient-classic--Two();
+	//background-color: rgba($color6, 0.86);
+	@include gradient-classic--Two(90deg, 0.92);
 }
 
 .modal-content{

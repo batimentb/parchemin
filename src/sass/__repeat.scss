@@ -405,17 +405,20 @@ h6,.h6-like{
 		}
 		&,
 		.bList-number,
-		.bList-title{
+		.bList-title,
+		.bList-valeur{
+			&,a{
 			color:$color3;
+			}
 		}
 
 		.badge{
-			color:$cRouge;
+			color:$color6;
 			background-color:$base-background;
 		}
 
 		.btn-ico{
-			color:$cRouge;
+			color:$color6;
 			@extend .btn-ico.hover;
 		}
 	}//End etat = hover
@@ -437,6 +440,15 @@ h6,.h6-like{
 	}// .active
 
 }// .bList
+
+	.bList-number,
+	.bList-title,
+	.bList-valeur{
+		&,a{
+			transition:color 0.25s ease-in;
+		}
+	}
+
 	.bList-number{
 		font-family:$font-BL;
 		font-size:1.7rem;
@@ -447,9 +459,11 @@ h6,.h6-like{
 		.badge{
 			position:relative;
 			top:-2px;
+			margin-right: 7px;
+			text-transform:uppercase;
 		}
 		.badge + .bList-title{
-			margin-left: 7px;
+			//margin-left: 7px;
 		}
 	}
 	.bList-lineTwo{}
@@ -541,6 +555,10 @@ h6,.h6-like{
 					//content:'\f013';
 				}
 			}
+			.close:hover{
+				color:$notiColor;
+				background-color:$base-background;;
+			} 
 		}
 	}
 	.message{
@@ -561,6 +579,7 @@ h6,.h6-like{
 		color:$color3;
 		border-color:$base-background;
 		background-color:transparent;
+		transition:background-color 0.15s ease-in, color 0.10s ease-in;
 	} 
 	>:last-child{
 		max-width:45px;

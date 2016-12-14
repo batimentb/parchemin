@@ -26,7 +26,7 @@ var bower = './bower_components',
     jsPath = './src/js'; //Dossier avec nos fichiers JS,
     imagesPath = "./src/images/*/*",
     fontsPath = './src/fonts/**/*',
-    fontPath = './src/font/**/*'
+    fontPath = './src/font/**/*';
 
 //Option Sass
 var sassOptions = {
@@ -156,12 +156,6 @@ gulp.task('watch', function () {
 });
 
 /*
- // Tâche "watch" = je surveille LESS et HTML
- gulp.task('watch', function () {
- gulp.watch(source + '/assets/css/*.less', ['css']);
- gulp.watch(source + '/{,conf/}/{,livres/}*.html', ['html']);
- });
-
  // tâche qui surveille le changement / modifications effectuées au niveau des fichiers scss
  gulp.task('watch', ['browserSync', 'compass'], function() {
  gulp.watch('sass/*.scss', ['compass']);

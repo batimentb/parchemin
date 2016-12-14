@@ -76,8 +76,15 @@
 
   //background-image: repeating-linear-gradient($angle, $color6, $color7 5px, $color2 5px, $color2 10px);
 }
-@mixin gradient-classic--Two( $angle: 90deg) {
-  background: repeating-linear-gradient( $angle, $color6, $color6 52%, $color7 100%);
+@mixin gradient-classic--Two( $angle: 90deg, $transparent:null) {
+
+  @if $transparent == null {
+    $transparent: 1;
+  }
+  @else {}
+
+  background: repeating-linear-gradient( $angle, rgba($color6,$transparent) , rgba($color6,$transparent) 52%, rgba($color7,$transparent) 100%);
+
 }
 
 @mixin gradient-striped--Three($angle: -45deg, $angle2: 90deg) {
