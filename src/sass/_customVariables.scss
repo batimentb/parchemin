@@ -33,7 +33,7 @@ $gris4:#dbdbdb;
 // font
 $base-color: $color1;
 $alpha-color            : $color2; // text color on primary elements
-$beta-color             : $color7; // text color on secondary elements
+$beta-color             : $color6; // text color on secondary elements
 
 $headings-color         : $color2; // text color on headings
 $headings-1-color       : $color7; // text color on headings level 1
@@ -41,11 +41,11 @@ $headings-1-color       : $color7; // text color on headings level 1
 
 // backgrounds
 $base-background  : $color3;
-$alpha-background : $color7; // primary elements background color
+$alpha-background : $color6; // primary elements background color
 $beta-background  : $color7 ; // secondary elements background color
 
 //Link
-$link-color: $cRouge;
+$link-color: $color6;
 $link-hover-color: $color2;
 
 //->Variables de dimension

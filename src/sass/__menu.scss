@@ -24,18 +24,77 @@
 	&:after{}
 }
 
-.menu{
-	a{
-		text-decoration:none;
+
+.nav{
+	ul{
+		list-style:none;
 	}
 }
+.nav-secondaire,
+.nav-pagination{
+	border-bottom:1px solid $gris4;
 
-//Menu horizontal
-.menu--h{
-	margin:0;
-	padding:0;
-	> li{
-		display:inline-block;
+	ul{
+		display: flex;
+		flex-wrap: wrap;
+		justify-content:space-between; //Horizontal : space-between stretch flex-start
+		align-content:flex-start; //Vertical multiligne : space-between stretch flex-start
+		align-items:stretch;//Vertical : 
+		margin:0;
+		padding:0;
+	}
+	li{
+		//flex: 1 1 0%; //Grow Shrink Basis
+		//width:auto;
+		margin:0;
+		padding:0;		
+	}
+	li + li{
+		margin-left:10px;
+	}
+	li a{
+		position:relative;
+		display:block;
+		padding:14px 8px;
+		line-height:1.3;
+		color:$color5;
+		font-size:1.2rem;
+		font-family:$font-BL;
+		transition:color 0.15s ease-in;
+		&:after{
+			display:block;
+			content:' ';
+			position:absolute;
+			height:4px;
+			bottom:-1px;
+			left:5px;
+			right:5px;
+			background-color:transparent;
+			transition:background-color 0.2s linear;
+		}
+	}
+	li.active,
+	li:hover{
+		a{
+			color:$alpha-color;
+			&:after{
+				background-color:$alpha-background;
+			}
+		}
+	}
+}//.nav-secondaire
+
+.nav-secondaire{}
+
+.nav-pagination{
+	display: flex;
+	flex-wrap: wrap;
+	justify-content:space-between; //Horizontal : space-between stretch flex-start
+	align-items:center;//Vertical :
+	ul{}
+	li + li{}
+	li a{
+		padding:16px 8px;
 	}
 }
 
@@ -95,17 +154,6 @@
 			background:$alpha-color;//#8d8e8e
 		}
 	}
-	li.settings{
-		a{
-			border-top:1px dashed rgba(255, 255, 255, 0.07);
-			border-bottom:none;
-		}
-		svg{
-			.st0{fill:#FFFFFF;stroke:#fff;stroke-width:14;stroke-miterlimit:10;}
-			.st1{fill:none;stroke:#fff;stroke-width:14;stroke-miterlimit:10;}
-		}
-	}
-
 }//End menu-p (principal)
 
 .menu-p--littleFat{
@@ -113,143 +161,5 @@
 	a{
 		font-size:1.0rem;
 		line-height:1.8rem;
-	}
-}
-
-//>Menu cressamblant au style title2
-.nav-tabs-0{
-	border-bottom:1px dashed $gris1;
-	
-	li{
-		display:inline-block;
-		float:left;
-		margin:0;
-	}
-	li + li {
-		margin-left:32px;
-	}
-
-	li a{
-		padding:19px 3px;
-		font-size:1.40rem;
-		font-weight:400;
-		line-height:(14.36/14.0);
-		color:$headings-1-color;
-		font-family:$font-M;
-		text-transform:uppercase;
-		border-bottom:4px solid transparent;
-		opacity:0.40;
-	}
-
-	li.active a{
-		font-family:$font-BL;
-		color:$headings-1-color;
-		background-color:transparent;
-		border-bottom:4px solid $alpha-background;
-		opacity:1;
-	}
-
-	li.active a:hover,
-	li a:hover{
-		color:$headings-1-color;
-		background-color:transparent;
-		border-bottom:4px solid $alpha-background;
-	}
-}
-
-
-/* ---------------------------------------------- */
-/* ==NAV 	   		  					          */
-/* ---------------------------------------------- */
-.nav-pills--basic{
-
-	li{}
-
-	li a{
-		
-		font-size:1.733rem;
-		text-transform:uppercase;
-		color:#aab2bd;
-		white-space: nowrap;//Sinon sous chrome ca passe a la ligne apres le svg
-		border-bottom:4px solid transparent;
-		border-radius:0;
-
-		transition:border 0.15s ease 0s;
-
-		svg{
-			display:inline-block;
-			width:22px;
-			margin:-2px 12px 0 0;
-			vertical-align:middle;
-			fill:#aab2bd;
-		}
-	}
-
-	li.active a{
-		color:#aab2bd;
-		background-color:transparent;
-		border-bottom:4px solid $alpha-color;
-	}
-
-	li.active a:hover,
-	li a:hover{
-		color:#aab2bd;//434a54
-		background-color:transparent;
-		border-bottom:4px solid lighten($alpha-color, 20%);
-	}
-}
-
-.nav-pills--tuile{
-
-	li{}
-
-	li a{
-		width:168px;height:168px;
-		padding:32px 0 0 0;
-		font-size:1.733rem;
-		text-align:center;
-		text-transform:uppercase;
-		color:#fff;
-		white-space: nowrap;//Sinon sous chrome ca passe a la ligne apres le svg
-		border:1px solid rgba(190, 190, 190, 0.6);
-		border-radius:0;
-
-		transition:all 0.15s ease 0s;
-		background:#2b3f55;
-
-		svg{
-			display:block;
-			width:50px;
-			margin:0px auto 26px auto;
-			fill:#fff;
-		}
-	}
-
-
-	li.active a:hover,
-	li a:hover{
-		//border-bottom:4px solid lighten($cBleu, 20%);
-		background-color:$alpha-color;
-	}
-
-	> li + li {
-		margin-left: 15px;
-	}
-
-}
-.menu-semaine{
-	
-}
-.menu-semaine--fb{
-	> a {
-
-		width:auto;
-		flex:auto;
-	}
-
-	>:first-child,
-	>:last-child{
-		flex:1;
-		width:30%;
 	}
 }
