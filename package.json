@@ -1,15 +1,15 @@
 {
-  "name": "batb-sav",
+  "name": "parchemin",
   "homepage": "https://github.com/batimentb/parchemin",
   "version": "0.2.3",
   "description": "Parchemin CSS",
-  "main": "index.js",
+  "main": "dist/app.css",
   "scripts": {
     "build": "gulp"
   },
   "authors": [
     "David Duphil",
-    "Henry-Benoit Pomarede",
+    "HacheB <https://github.com/HacheB>",
     "Antoine Bordeau <antoine@batb.fr>"
   ],
   "license": "ISC",

@@ -8,7 +8,7 @@
     "Antoine Bordeau <antoine@batb.fr>"
   ],
   "description": "Html & Css Library",
-  "main": "app.css",
+  "main": "dist/app.css",
   "keywords": [
     "css",
     "html",
