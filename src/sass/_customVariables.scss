@@ -67,9 +67,9 @@ $link-hover-color: $color2;
 $badges: (1: $cRouge, 2: #f88b7f, 3: #f5c8a3, 4: $cVertClair, 5: $color5, 6: #7ad5da);
 
 $notification-list: (
-	(succes, $cVertClair, '\f00c'),
+	(success, $cVertClair, '\f00c'),
 	(error, $cRouge , '\f0e7'),
-	(carreful, #f5c8a3, '\f071'),
+	(warning, #f5c8a3, '\f071'),
 	(information, #7ad5da, '\f05a'),
 );
 
