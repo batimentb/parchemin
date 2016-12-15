@@ -98,6 +98,11 @@
 	border-radius:500px;
 	box-shadow: 0px 0px 30px 0px rgba(0, 0, 0, 0.0); /* offset-x | offset-y | blur-radius | spread-radius | color */
 	transition:box-shadow 0.15s ease, border-color 0.10 ease-out;
+	i{
+		vertical-align:middle;
+		//line-height:51px;
+		line-height: inherit;
+	}
 
 	&:hover,
 	&.hover{
@@ -116,6 +121,10 @@
 		width:34px;
 		line-height:32px;
 		font-size:1.2rem;
+		i{
+			//line-height:34px;
+			line-height: inherit;
+		}
 	}
 
 .btn-linkfat{
