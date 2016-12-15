@@ -44,6 +44,28 @@
 			background-color:$base-background;
 		}
 	}//.btn-standard--invert
+	.btn-standard--warning{
+		color:$color3;
+		border:1px solid $cRouge;
+		background-color:$cRouge;
+		&:hover,
+		&.hover{
+			color:$cRouge;
+			border-color:$color4;
+			background-color:$color3;
+		}
+	}//.btn-standard--invert
+	.btn-standard--success{
+		color:$color3;
+		border:1px solid $cVertClair;
+		background-color:$cVertClair;
+		&:hover,
+		&.hover{
+			color:$cVertClair;
+			border-color:$color4;
+			background-color:$color3;
+		}
+	}//.btn-standard--invert
 
 	//Quand l'icone est a droite du texte
 	.btn-standard--icoRight{
