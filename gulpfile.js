@@ -21,7 +21,7 @@ var gulp = require('gulp'),
 
 // Paths
 var bower = './bower_components',
-    inputSass = './src/sass/**/*.scss',
+    inputSass = './src/sass/parchemin.scss',
     output = './dist',
     jsPath = './src/js'; //Dossier avec nos fichiers JS,
     imagesPath = "./src/images/*/*",

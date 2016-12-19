@@ -48,20 +48,6 @@ $beta-background  : $color7 ; // secondary elements background color
 $link-color: $color6;
 $link-hover-color: $color2;
 
-//->Variables de dimension
-//$widthReference : 1840;//La largeur de référence dans le psd pour calculer les % (attention cette valeur impacte)
-
-//$largeurSite:1400; // largeur max du site
-//$largeurMaxContent:960;  // largeur max du contenu du site
-//$largeurMinSite:0; //largeur mini du site
-
-//$largeurSideBarNav:79;//barre fixe de navigation (en pixel)
-//$hauteurHeader-Min:80;//Header (en pixel)
-//$hauteurFooter:0;//Footer (en pixel) //51
-
-//$pLC:34px;//Padding left contenu principal
-//$pLCPr: percentage(34 / $widthReference); //En pourcentage
-
 //Les différents badges
 $badges: (1: $cRouge, 2: #f88b7f, 3: #f5c8a3, 4: $cVertClair, 5: $color5, 6: #7ad5da);
 
@@ -72,7 +58,6 @@ $notification-list: (
 	(warning, #f5c8a3, '\f071'),
 	(information, #7ad5da, '\f05a'),
 );
-
 
 
 //->Les typo selon la graisse
