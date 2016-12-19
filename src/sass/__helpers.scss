@@ -17,25 +17,11 @@
     -moz-osx-font-smoothing: grayscale;
     osx-font-smoothing: grayscale;
 }
-//>Sert a pour intégrer une icone bootstrapfont via le css
-/*%glyphiconme{
-    position: relative;
-    top: 1px;
-    display: inline-block;
-    font-family: 'Glyphicons Halflings';
-    font-style: normal;
-    font-weight: normal;
-    line-height: 1;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-}*/
 
 /* ----------------------------- */
 /* ==GRILLES 		 	         */
 /* ----------------------------- */
 //On utilise la grille de knacss et ses classes flex-box
-
-
 
 //>Aligne verticalement les box
 .grid-vCenter{
@@ -65,6 +51,15 @@
 	color:brown;
 }
 
+.cText{
+	color:$color3;
+}
+@each $notiStatus, $notiColor, $notiStatusIco in $notification-list {
+	&.cText--#{$notiStatus} {
+		color:$notiColor;
+	}
+}
+ 
 /* ----------------------------- */
 /* ==Style de Table 		 	 */
 /* ----------------------------- */

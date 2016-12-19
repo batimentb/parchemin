@@ -46,7 +46,7 @@
 	}//.btn-standard--invert
 
 	@each $notiStatus, $notiColor, $notiStatusIco in $notification-list {
-		&.btn-standard--#{$notiStatus} {
+		.btn-standard--#{$notiStatus} {
 			background-color:$notiColor;
 
 			color:$color3;
