@@ -62,10 +62,10 @@ $link-hover-color: $color2;
 //$pLC:34px;//Padding left contenu principal
 //$pLCPr: percentage(34 / $widthReference); //En pourcentage
 
-//XXXXX
-//$blocages: (reservation: #8fb6d7, li: #df5664, entretient: #2fafb1, stage: #ec87bf, ecole: #ac92ed, tournois: #a7df56,  ferme: #9e9e9e,  libre: rgba(#929397, 0.10));
+//Les différents badges
 $badges: (1: $cRouge, 2: #f88b7f, 3: #f5c8a3, 4: $cVertClair, 5: $color5, 6: #7ad5da);
 
+//Les différents états
 $notification-list: (
 	(success, $cVertClair, '\f00c'),
 	(error, $cRouge , '\f0e7'),
@@ -73,16 +73,6 @@ $notification-list: (
 	(information, #7ad5da, '\f05a'),
 );
 
-
-
-
-
-$types: text #474747, photo #D86043, photoset #D86043, quote #F19F35, link #57BC8A, chat #4EA8D7, video #77828D, audio #AB7DC2, answer #036564;
-@each $type in $types {
-     .post-type-#{nth($type, 1)} .post-icon{
-        background: nth($type, 2);
-    }
-}
 
 
 //->Les typo selon la graisse
