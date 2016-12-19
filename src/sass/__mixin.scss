@@ -3,12 +3,6 @@
 /* ==Mixin 						           */
 /* ----------------------------- */
 
-//BG dans la zone de separation/actions/titre juste sous le header
-@mixin bg_sous_header($opacity:0.02){
-  background-color:rgba(#000, $opacity);
-}
-
-
 //Mixin coin arrondi
 @mixin coin_arrondi_complet ($tl:0, $tr:0, $br:0, $bl:0){
   border-top-left-radius: $tl;
@@ -100,82 +94,4 @@
 @mixin gradient-grey($angle: 90deg) {
 
   background: repeating-linear-gradient( $angle, #f3f2f2, #f2f1f1 50%, #f2f1f1 100%);
-}
-
-/*
-  background: repeating-linear-gradient(
-    to right,
-    #f6ba52,
-    #f6ba52 10px,
-    #ffd180 10px,
-    #ffd180 20px
-  );
-*/
-
-
-
-//Ce qui est ci-dessous est DEPRECATED !!
-
-//Mixin  transform-style DEPRECATED
-//pour les transformation 3d il faut souvent mettre "transform-style: preserve-3d;" pour preserver le rendu
-@mixin transformStyle ($transStyle){
-//-webkit-transform-style:$transStyle;
-//-moz-transform-style: $transStyle;
-//-ms-transform-style: $transStyle;
-//-o-transform-style: $transStyle;
-transform-style:$transStyle;
-}
-
-
-
-//Mixin  translate3d
-// DEPRECATED
-@mixin translate3d ($x, $y, $z){
-//-webkit-transform: translate3d($x, $y, $z);
-// -moz-transform: translate3d($x, $y, $z);
-transform: translate3d($x, $y, $z);
-}
-
-// DEPRECATED
-@mixin transformOrigin ($top:50%, $left:50%){
-//-ms-transform-origin: $top $left; /* IE 9 */
-//-moz-transform-origin: $top $left; /* mozilla*/
-//-webkit-transform-origin: $top $left; /* Chrome, Safari, Opera */
-transform-origin: $top $left;
-}
-//Exemple utilisation : @include transformOrigin(20% 50%); || @include transformOrigin(20px 60px);
-//  @include transformOrigin( top 20px left 60px); //Il est possible de changer cette valeur en utilisant un mot-clef de position (top, right, bottom, left) suivi d'une valeur chiffrée dont l'unité peut varier (px, %, etc.)
-
-@mixin animation ($duration, $animation:none, $delay:0, $fillmode:none) {
-/*-webkit-animation-delay: $delay;
--webkit-animation-duration: $duration;
--webkit-animation-name: $animation;
--webkit-animation-fill-mode: $fillmode;
-
--moz-animation-delay: $delay;
--moz-animation-duration: $duration;
--moz-animation-name: $animation;
--moz-animation-fill-mode: $fillmode;
-
--o-animation-delay: $delay;
--o-animation-duration: $duration;
--o-animation-name: $animation;
--o-animation-fill-mode: $fillmode;
-//*/
-
-animation-delay: $delay;
-animation-duration: $duration;
-animation-name: $animation;
-animation-fill-mode: $fillmode;
-/*
-pour chaque propriété individuelle de la propriété raccourcie :
-animation-name: none
-animation-duration: 0s
-animation-timing-function: ease
-animation-delay: 0s
-animation-iteration-count: 1
-animation-direction: normal
-animation-fill-mode: none
-animation-play-state: running
-*/
 }

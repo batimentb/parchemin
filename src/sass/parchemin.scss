@@ -3,11 +3,11 @@
 */
 @charset "utf-8";
 
-@import "_customVariables.scss"; //Surcharge les variables de bootstrap && nos variables
+@import "_customVariables.scss"; //Surcharge des variables de Knacss && nos variables
 @import "./knacss/knacss.scss";
 
 //-->Importation des style propre au projet__
-@import "__mixin-perso.scss";
+@import "__mixin.scss";
 @import "__helpers.scss";
 @import "__layout-et-principal.scss";
 @import "__menu.scss";
