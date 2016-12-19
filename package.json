@@ -1,7 +1,7 @@
 {
   "name": "parchemin",
   "homepage": "https://github.com/batimentb/parchemin",
-  "version": "0.2.3",
+  "version": "0.2.31",
   "description": "Parchemin CSS",
   "main": "dist/app.css",
   "scripts": {
