@@ -32,39 +32,39 @@
 //>Raleway (sans serif)
 @font-face {
     font-family: 'ralewayblack';
-    src: url('../fonts/raleway-black-webfont.woff2') format('woff2'),
-         url('../fonts/raleway-black-webfont.woff') format('woff');
+    src: url('#{$font-url-parchemin}/raleway-black-webfont.woff2') format('woff2'),
+         url('#{$font-url-parchemin}/raleway-black-webfont.woff') format('woff');
     font-weight: normal;
     font-style: normal;
 
 }
 @font-face {
     font-family: 'ralewayextrabold';
-    src: url('../fonts/raleway-extrabold-webfont.woff2') format('woff2'),
-         url('../fonts/raleway-extrabold-webfont.woff') format('woff');
+    src: url('#{$font-url-parchemin}/raleway-extrabold-webfont.woff2') format('woff2'),
+         url('#{$font-url-parchemin}/raleway-extrabold-webfont.woff') format('woff');
     font-weight: normal;
     font-style: normal;
 
 }
 @font-face {
     font-family: 'ralewaybold';
-    src: url('../fonts/raleway-bold-webfont.woff2') format('woff2'),
-         url('../fonts/raleway-bold-webfont.woff') format('woff');
+    src: url('#{$font-url-parchemin}/raleway-bold-webfont.woff2') format('woff2'),
+         url('#{$font-url-parchemin}/raleway-bold-webfont.woff') format('woff');
     font-weight: normal;
     font-style: normal;
 }
 @font-face {
     font-family: 'ralewaymedium';
-    src: url('../fonts/raleway-medium-webfont.woff2') format('woff2'),
-         url('../fonts/raleway-medium-webfont.woff') format('woff');
+    src: url('#{$font-url-parchemin}/raleway-medium-webfont.woff2') format('woff2'),
+         url('#{$font-url-parchemin}/raleway-medium-webfont.woff') format('woff');
     font-weight: normal;
     font-style: normal;
 
 }
 @font-face {
     font-family: 'ralewayregular';
-    src: url('../fonts/raleway-regular-webfont.woff2') format('woff2'),
-         url('../fonts/raleway-regular-webfont.woff') format('woff');
+    src: url('#{$font-url-parchemin}/raleway-regular-webfont.woff2') format('woff2'),
+         url('#{$font-url-parchemin}/raleway-regular-webfont.woff') format('woff');
     font-weight: normal;
     font-style: normal;
 }

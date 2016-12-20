@@ -99,7 +99,7 @@ input.title{
 .formSelect{
 	border-radius:0;
 	cursor:pointer;
-	background-image:url('../images/css/select-chevron-full--black-x1.png');
+	background-image:url('#{$image-url-parchemin}/css/select-chevron-full--black-x1.png');
 	background-position: calc(100% - 12px - 10px) 50% ;
 	background-size: 5px 3px;
 	background-repeat: no-repeat;
