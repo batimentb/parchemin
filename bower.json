@@ -1,13 +1,13 @@
 {
   "name": "parchemin",
   "homepage": "https://github.com/batimentb/parchemin",
-  "version": "0.2.3",
+  "version": "0.2.4",
   "authors": [
     "David Duphil",
     "HacheB <https://github.com/HacheB>",
     "Antoine Bordeau <antoine@batb.fr>"
   ],
-  "description": "Html & Css Library",
+  "description": "Parchemin CSS : an Html & Css Library",
   "main": "dist/app.css",
   "keywords": [
     "css",

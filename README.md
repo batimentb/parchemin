@@ -1,5 +1,10 @@
 # Parchemin
 Html &amp; Css Library of good looking components
 
+Current version : 0.2.4
 
-[Style Guide](https://batimentb.github.io/parchemin/)
+bower install parchemin
+npm install parchemin
+
+
+[Style Guide and info here](https://batimentb.github.io/parchemin/)
