@@ -10,6 +10,7 @@
   "description": "Parchemin CSS : an Html & Css Library",
   "main": "dist/app.css",
   "keywords": [
+    "parchemin",
     "css",
     "html",
     "components"

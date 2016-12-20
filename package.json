@@ -7,6 +7,16 @@
   "scripts": {
     "build": "gulp"
   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/batimentb/parchemin.git"
+  },
+  "keywords": [
+    "parchemin",
+    "css",
+    "html",
+    "components"
+  ],
   "authors": [
     "David Duphil",
     "HacheB <https://github.com/HacheB>",
