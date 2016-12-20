@@ -1,7 +1,7 @@
 # Parchemin
 Html &amp; Css Library of good looking components
 
-Current version : 0.2.4
+Current version : 0.2.5
 
 bower install parchemin
 npm install parchemin
