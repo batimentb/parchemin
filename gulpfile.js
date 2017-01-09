@@ -140,7 +140,7 @@ gulp.task('watch', function () {
     //return gulp
     // Watch the input folder for change,
     // and run `sass` task when something happens
-    gulp.watch(inputSass, ['sass'])
+    gulp.watch('./src/sass/*', ['sass'])
     // When there is a change,
     // log a message in the console
         .on('change', function (event) {
