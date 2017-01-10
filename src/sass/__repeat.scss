@@ -643,6 +643,36 @@ h6,.h6-like{
 	& + .bComments {
 		margin-top:20px;
 	}
+
+	//>Commentaire privé
+	&.private{
+		.bComments-message{
+			position:relative;
+			padding:10px;
+			//@include gradient-classic--Two;
+			background-color:$beta-background;
+
+			&,
+			a{
+				color:$color3;
+			}
+			a{
+				text-decoration:underline;
+			}
+			&:before{
+				position:absolute;
+				top:16px;
+				left:-4px;
+				display:block;
+				content:'';
+				width: 0;
+				height: 0;
+				border-style: solid;
+				border-width: 4.5px 4px 4.5px 0;
+				border-color: transparent $beta-background transparent transparent;
+			}
+		}
+	}//&/private
 }
 	.bComments-message{
 		margin:5px 0 0 0;
