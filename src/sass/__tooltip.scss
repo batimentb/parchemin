@@ -1,0 +1,131 @@
+@charset "utf-8";
+/* Tooltip */
+.tooltip {
+	position: absolute;
+	visibility: hidden;
+	display: block;
+
+	width: auto;
+	padding: 12px;
+
+	font-size:1.2rem;
+	font-family:$font-M;
+	color: $color3;
+	text-align: center;
+	
+	border-radius: 3px;
+	/*border-bottom: 1px dotted black; /* If you want dots under the hoverable text */
+	background-color: #c5c5c5;
+	z-index: +2;
+
+	/* Fade in tooltip */
+	opacity: 0;
+	transition: opacity 1s;
+
+	.tooltip-arrow{
+		content: "";
+		position: absolute;
+		border-width: 5px;
+		border-style: solid;
+	}
+
+	.tooltip-inner{
+		white-space:nowrap;
+	}
+}
+
+	/*Position TOP : */
+	.tooltip-top{
+		bottom: 125%;
+		left: 50%;
+		transform:translateX(-50%);
+		
+		.tooltip-arrow{
+			top: 100%;
+			left: 50%;
+			margin-left: -5px;
+			border-color: #c5c5c5 transparent transparent transparent;
+		}
+	}
+
+	/*Position RIGHT : */
+	.tooltip-right{
+		top: 50%;
+		left: 115%;
+		left:calc(100% + 12px);
+		transform:translateY(-50%);
+		
+		.tooltip-arrow{
+			top: 50%;
+			right: 100%;
+			margin-top: -5px;
+			border-color: transparent #c5c5c5 transparent transparent;
+		}
+	}
+
+	/*Position BOTTOM : */
+	.tooltip-bottom{
+		top: 125%;
+		left: 50%;
+		transform:translateX(-50%);
+		
+		.tooltip-arrow{
+			bottom: 100%;
+			left: 50%;
+			margin-left: -5px;
+			border-color: transparent transparent #c5c5c5 transparent;
+		}
+	}
+	/*Position LEFT : */
+	.tooltip-left{
+		top: 50%;
+		right: 115%;
+		right:calc(100% + 12px);
+		transform:translateY(-50%);
+		
+		.tooltip-arrow{
+			top: 50%;
+			left: 100%;
+			margin-top: -5px;
+			border-color: transparent transparent transparent #c5c5c5;
+		}
+	}
+
+/* Appartition de la tooltip */
+.tooltip:hover,
+.tooltip.active
+{
+    visibility: visible;
+    opacity: 1;
+}
+
+/*
+	Les différents autres styles.
+	(le même nombre de style que les badges)
+*/
+@each $number, $color in $badges {
+	&.tooltip--#{$number} {
+		background-color:$color;
+
+		&.tooltip-top{
+			.tooltip-arrow{
+				border-color: $color transparent transparent transparent;
+			}
+		}
+		&.tooltip-right{
+			.tooltip-arrow{
+				border-color: transparent $color transparent transparent;
+			}
+		}
+		&.tooltip-bottom{
+			.tooltip-arrow{
+				border-color: transparent transparent $color transparent;
+			}
+		}
+		&.tooltip-left{
+			.tooltip-arrow{
+				border-color: transparent transparent transparent $color;
+			}
+		}
+	}
+}
