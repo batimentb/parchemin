@@ -19,6 +19,7 @@ $color4    : #f0f0f0;
 $color5    : #aeaeae;
 $color6    : #5568f4; //f45558
 $color7    : #a055f4; //f79b59
+$color8    : #f5c8a3; //Un genre de pastel orange
 
 $cVertClair:#7adaa3;
 $cVert:#568331;
@@ -49,13 +50,13 @@ $link-color: $color6;
 $link-hover-color: $color2;
 
 //Les différents badges
-$badges: (1: $cRouge, 2: #f88b7f, 3: #f5c8a3, 4: $cVertClair, 5: $color5, 6: #7ad5da);
+$badges: (1: $cRouge, 2: #f88b7f, 3: $color8, 4: $cVertClair, 5: $color5, 6: #7ad5da);
 
 //Les différents états
 $notification-list: (
 	(success, $cVertClair, '\f00c'),
 	(error, $cRouge , '\f0e7'),
-	(warning, #f5c8a3, '\f071'),
+	(warning, $color8, '\f071'),
 	(information, #7ad5da, '\f05a'),
 );
 

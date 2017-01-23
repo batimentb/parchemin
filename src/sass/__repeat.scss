@@ -623,7 +623,7 @@ h6,.h6-like{
 	>:first-child{
 		max-width:38px;
 		width:38px;
-		padding:0px 0 0 0;
+		padding:6px 0 0 0;
 		img{
 			border-radius:50%;
 			background-color:$gris1;
@@ -632,16 +632,16 @@ h6,.h6-like{
 	>:last-child{
 		width:auto;
 		flex:1;
-		padding:0px 0 15px 0;
+		padding:0px 0 18px 0;
 		margin:0 0 0 20px;
-		border-bottom:1px dashed $gris4;
+		border-bottom:1px dashed $gris2;
 		b,strong{
 			font-family:$font-B;
 		}
 
 	}
 	& + .bComments {
-		margin-top:15px;
+		margin-top:20px;
 	}
 
 	//>Commentaire privé
@@ -651,6 +651,7 @@ h6,.h6-like{
 			padding:10px;
 			//@include gradient-classic--Two;
 			background-color:$beta-background;
+			border-radius:2px;
 
 			&,
 			a{
@@ -659,6 +660,8 @@ h6,.h6-like{
 			a{
 				text-decoration:underline;
 			}
+			/*
+			//Fleche vers la gauche
 			&:before{
 				position:absolute;
 				top:16px;
@@ -670,7 +673,7 @@ h6,.h6-like{
 				border-style: solid;
 				border-width: 4.5px 4px 4.5px 0;
 				border-color: transparent $beta-background transparent transparent;
-			}
+			}//*/
 		}
 	}//&/private
 }
@@ -679,6 +682,9 @@ h6,.h6-like{
 		font-family:$font-M;
 	}
 	.bComments-pj{
+
+		ul{}
+		li{}
 		>span{
 			display:block;
 			margin:8px 0;
@@ -689,10 +695,34 @@ h6,.h6-like{
 		a{
 			margin:2px 0;
 			padding:1px 0;
-			display:block;
+			display:inline-block;
 			line-height:1;
 		}
+		.delete{
+			margin-left:10px;
+			padding-left:2px;
+			padding-right:2px;
+			opacity:0;
+			transition:opacity 0.12s ease-in 0s;
+		}
+		li:hover{
+			.delete{
+				opacity:1;
+			}
+		}
 	}
+	.bComments-see{
+		color:$color5;
+		font-size:1.2rem;
+		a{
+			color:$color5;
+		}
+	}
+		.bComments-see--me{
+			a{
+				color:$color8;
+			}
+		}
 
 
 //>Barra d'avancement(0<->100) [Jauge]
