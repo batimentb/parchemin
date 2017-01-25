@@ -525,8 +525,8 @@ h6,.h6-like{
 	.bEvent-content{
 		@extend .flex-container;
 		display:flex;
-		margin:14px 0 0 18px;
-		padding:0 0 10px 23px;
+		margin:8px 0 0 18px;
+		padding:0 0 18px 23px;
 		border-left:1px dashed $gris4;
 
 		>:first-child{
