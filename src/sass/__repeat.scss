@@ -65,6 +65,24 @@
 		}
 	}
 
+	@each $bNumero, $bColor in $badges {
+		.btn-standard--#{$bNumero} {
+			background-color:$bColor;
+
+			color:$color3;
+			border:1px solid $bColor;
+			background-color:$bColor;
+			&:hover,
+			&.hover{
+				color:$bColor;
+				border-color:$gris2;
+				background-color:$base-background;
+			}
+		}
+	}
+
+	
+
 	//Quand l'icone est a droite du texte
 	.btn-standard--icoRight{
 		i{
