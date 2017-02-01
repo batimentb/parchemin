@@ -129,3 +129,72 @@
 		}
 	}
 }
+
+/*
+ * Tooltip des médias
+ */
+ .tooltip--media{
+ 	padding:0;
+	border-radius:0;
+	background-color:transparent;
+
+	.tooltip-inner{
+		iframe,
+		video,
+		img{
+			max-width:332px;
+		}
+	}
+	&:after{
+		display:block;
+		position:absolute;
+		content:'';
+		background-color:$base-background;
+	}
+
+		&.tooltip-top{
+			&:after{;
+				bottom:0;
+				height:4px;
+				right:20px;
+				left:20px;
+			}
+
+			.tooltip-arrow{
+				border-color: $base-background transparent transparent transparent;
+			}
+		}
+		&.tooltip-right{
+			&:after{;
+				left:0;
+				width:4px;
+				top:20px;
+				bottom:20px;
+			}
+			.tooltip-arrow{
+				border-color: transparent $base-background transparent transparent;
+			}
+		}
+		&.tooltip-bottom{
+			&:after{;
+				top:0;
+				height:4px;
+				right:20px;
+				left:20px;
+			}
+			.tooltip-arrow{
+				border-color: transparent transparent $base-background transparent;
+			}
+		}
+		&.tooltip-left{
+			&:after{;
+				right:0;
+				width:4px;
+				top:20px;
+				bottom:20px;
+			}
+			.tooltip-arrow{
+				border-color: transparent transparent transparent $base-background;
+			}
+		}
+}
