@@ -22,6 +22,9 @@
 	opacity: 0;
 	transition: opacity 0.40s ease;
 
+	/*Correction texte flou ac certain navigateur*/
+	-webkit-font-smoothing: antialiased;//CA ne fonctionne pas toujours
+
 	.tooltip-arrow{
 		content: "";
 		position: absolute;
@@ -38,7 +41,7 @@
 	.tooltip-top{
 		bottom: 125%;
 		left: 50%;
-		transform:translateX(-50%);
+		transform:translateX(-50%) translateZ(0);
 		
 		.tooltip-arrow{
 			top: 100%;
@@ -53,7 +56,7 @@
 		top: 50%;
 		left: 115%;
 		left:calc(100% + 12px);
-		transform:translateY(-50%);
+		transform:translateY(-50%) translateZ(0);
 		
 		.tooltip-arrow{
 			top: 50%;
@@ -67,7 +70,7 @@
 	.tooltip-bottom{
 		top: 125%;
 		left: 50%;
-		transform:translateX(-50%);
+		transform:translateX(-50%) translateZ(0);
 		
 		.tooltip-arrow{
 			bottom: 100%;
@@ -81,7 +84,7 @@
 		top: 50%;
 		right: 115%;
 		right:calc(100% + 12px);
-		transform:translateY(-50%);
+		transform:translateY(-50%) translateZ(0);
 		
 		.tooltip-arrow{
 			top: 50%;
@@ -137,6 +140,7 @@
  	padding:0;
 	border-radius:0;
 	background-color:$base-background;
+	box-shadow: 0px 0px 36px 4px rgba(0, 0, 0, 0.1);
 
 	.tooltip-inner{
 		position:relative;
