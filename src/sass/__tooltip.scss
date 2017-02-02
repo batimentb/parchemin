@@ -136,13 +136,34 @@
  .tooltip--media{
  	padding:0;
 	border-radius:0;
-	background-color:transparent;
+	background-color:$base-background;
 
 	.tooltip-inner{
+		position:relative;
 		iframe,
 		video,
 		img{
 			max-width:332px;
+		}
+
+		.actions{
+			//position: absolute;
+			width:100%;
+			padding:20px;
+			text-align:left;
+
+			.btn{
+				display:block;
+				font-size:1.4rem;
+				color:darken($gris4, 10%);
+
+				&:hover{
+					color:$base-color;
+				}
+			}
+			.btn + .btn{
+				margin-top:5px;
+			}
 		}
 	}
 	&:after{
