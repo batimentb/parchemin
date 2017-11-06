@@ -239,7 +239,77 @@
 	}
 
 
+//Btn standart avec ou sans icone ds le texte
+.btn-s2{
+	padding: 0.25em 0.9em;
+	color:$alpha-color;
+	font-family:$font-R;
+	font-weight:400;
+	font-size: $base-font-size;
+	border:2px solid $alpha-color;
+	background-color:$base-background;
+	border-radius: 18px;
+	transition:background-color 0.2s ease-in, border-color 0.25s ease-in, color 0.15s ease-in;
+	i{
+		&:not(:last-child):first-child{
+			margin-right: 4px;
+		}
+		&:not(:first-child):last-child{
+			margin-left: 4px;
+		}
+	}
+	b,strong {
+		font-weight: normal;
+		font-family: $font-B;
+	}
+	&:hover,
+	&.hover{
+		color:$color3;
+		border-color:$alpha-color;
+		background-color:$alpha-color;
+	}
 
+	&.is-smaller {
+		font-size: $h6-size;
+	}
+	&.is-small {
+		font-size: $h5-size;
+	}
+	&.is-medium {
+		font-size: $h4-size;
+	}
+	&.is-large {
+		font-size: $h3-size;
+	}
+}//.btn-s2
+
+	@each $notiStatus, $notiColor, $notiStatusIco in $notification-list {
+		.btn-s2--#{$notiStatus} {
+			color: $notiColor;
+			border-color: $notiColor;
+			background-color: $base-background;
+			&:hover,
+			&.hover{
+				color: $color3;
+				border-color: $notiColor;
+				background-color: $notiColor;
+			}
+		}
+	}
+
+	@each $bNumero, $bColor in $badges {
+		.btn-s2--#{$bNumero} {			
+			color: $bColor;
+			border-color: $bColor;
+			background-color: $base-background;
+			&:hover,
+			&.hover{
+				color: $color3;
+				border-color: $bColor;
+				background-color: $bColor;
+			}
+		}
+	}
 /* ----------------------------- */
 /* ==TITRE common				 */
 /* ----------------------------- */
