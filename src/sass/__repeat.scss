@@ -842,7 +842,7 @@ h6,.h6-like{
 		}
 		@for $i from 1 through 100 {
 			[data-progress="#{$i}"] &{
-				transform: translateX($i+%);
+				transform: translateX($i+ "%");
 			}
 		}
 	}
